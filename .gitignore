@@ -61,3 +61,5 @@ www/equipo/.bundle
 www/equipo/db/schema.rb
 www/equipo/Gemfile.lock
 !www/equipo/public/plugin_assets/.gitkeep
+www/red/elgg-config/settings.php
+

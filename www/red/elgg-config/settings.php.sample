@@ -36,21 +36,21 @@ if (!isset($CONFIG)) {
  *
  * @global string $CONFIG->dbuser
  */
-$CONFIG->dbuser = 'root';
+$CONFIG->dbuser = '';
 
 /**
  * The database password
  *
  * @global string $CONFIG->dbpass
  */
-$CONFIG->dbpass = 'yaco22';
+$CONFIG->dbpass = '';
 
 /**
  * The database name
  *
  * @global string $CONFIG->dbname
  */
-$CONFIG->dbname = 'ysu_red_2';
+$CONFIG->dbname = '';
 
 /**
  * The database host.
