@@ -1,0 +1,18 @@
+<?php
+
+# ----
+# Copyright (C) 2013-2016 - YSU Project (https://github.com/yosoyuno)
+# License: Affero GPL version 3 - http://www.gnu.org/licenses/agpl.html
+# ----
+
+## ES: Defina el usuario y contraseña para acceder a las DBs
+## EN: Define user and password to access DBs
+
+$YSU_URL = "yosoyuno.org";
+
+$YSU_DB_USER = "";
+$YSU_DB_PASS = "";
+
+$YSU_DB_RED 		= "ysu_red";
+
+?>

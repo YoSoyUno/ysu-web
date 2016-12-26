@@ -1,0 +1,37 @@
+/**
+ * Elgg News plugin
+ * @package amapnews
+ */
+
+#cboxLoadedContent .add_existed {
+    padding:20px;
+    display:block;
+    min-width:500px;
+    border: 1px solid #eaeaea;
+}
+
+#cboxLoadedContent .add_existed input[type="text"] {
+    width: 100%;
+}
+
+#cboxLoadedContent .add_existed input[type="submit"] {
+    float: right;
+}
+
+.elgg-form-amapnews-add .amapnews_featured .elgg-field-label {
+    width: 150px;
+    display: inline-block;
+}
+
+.elgg-form-amapnews-add .amapnews_featured input {
+    display: inline-block;
+}
+
+.elgg-form-amapnews-add .elgg-input-file {
+    width: 75%;
+}
+
+div.entity_photo {
+    float:left; 
+    margin: 0 10px 0 0;
+}

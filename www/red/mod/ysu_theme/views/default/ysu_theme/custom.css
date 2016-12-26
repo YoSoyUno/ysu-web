@@ -1,0 +1,52 @@
+#map_indextable,
+#open-slidebar .fa-close,
+#body-globalmap .nearby_search_form,
+#body-globalmap .elgg-head {
+  display: none;
+}
+
+/*Mapa completo*/
+#body-globalmap .elgg-page-default .elgg-page-body > .elgg-inner {
+  max-width: 100%;
+}
+#body-globalmap .elgg-page-body {
+  margin-top: 37px !important;
+}
+#body-globalmap .elgg-main {
+  padding: 0;
+}
+#map {
+  border:none;
+  height: 100vh !important;
+}
+
+
+#groups-tools .elgg-item-object-event-activacion-ysu {
+	background: #e5e5ad;
+}
+
+.fc-event-container .activacion-ysu {
+	background: #9b894b;
+}
+
+.fc-event-container .activacion {
+	background: #b4a673;
+}
+
+.fc-event-container .encuentro {
+	background: #d0c39a;
+}
+
+#map img[src^='http://red.yosoyuno.dev/serve-file/'], #map img[src^='http://red.yosoyuno.dev/cache/0/default/icons/user/'] {
+    border-radius: 50%;
+		border: 3px solid #fff;
+}
+
+#map .elgg-avatar {
+	float: left;
+}
+
+.infowindow .event_manager_event_list_icon {
+	float: left;
+	margin-right: 10px;
+}

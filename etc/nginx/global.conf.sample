@@ -1,0 +1,17 @@
+
+## Modo mantenimiento
+geo $maintenance_ysu {
+
+	# ES: cambiar a 1 para entrar en modo mantenimiento
+	default 0;
+
+	# ES: listado de IP's con acceso cuando se está en modo mantenimiento
+	#192.168.56.1 0; # IP en contexto de VM
+}
+
+## No indexar en buscadores
+map $http_user_agent $limit_bots_ysu {
+
+	# ES: cambiar a 1 para evitar que los sitios sean indexados
+	default 0;
+}

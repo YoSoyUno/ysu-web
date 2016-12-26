@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin_manifest xmlns="http://www.elgg.org/plugin_manifest/1.8">
+	<name>YSU Languages</name>
+	<id>ysu_languages</id>
+	<author>Fundacion Arsayian</author>
+	<version>1.0</version>
+	<description>Cadenas de traduccion propias de YSU</description>
+	<website>http://www.yosoyuno.org/</website>
+	<repository>https://github.com/yosoyuno</repository>
+	<copyright>Fundacion Arsayian</copyright>
+	<license>GNU General Public License version 2</license>
+
+	<requires>
+		<type>elgg_release</type>
+		<version>2.0</version>
+	</requires>
+	
+	<category>YSU</category>
+</plugin_manifest>
