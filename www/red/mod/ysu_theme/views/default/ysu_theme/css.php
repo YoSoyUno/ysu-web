@@ -446,7 +446,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .elgg-cover {
-    background-size: cover;
+    background-size: cover !important;
     display: block;
     height: 250px;
     width: 945px;
