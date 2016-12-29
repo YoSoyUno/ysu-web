@@ -5,9 +5,12 @@ return array (
   'amap_maps_api:all' => 'El camino',
   'amap_maps_api:menu' => 'El camino',
   'amap_maps_api:menu' => 'El camino',
+
   'profile:show' => 'Información del Ser',
 
-
+  'amapnews:group' => 'Noticias del Punto',
+  'event_manager:menu:group_events' => 'Eventos del Punto',
+  
   'event_manager_ysu:activacion_principal' => 'Activacion principal',
 
 ////////////////// PUNTOS (groups)
