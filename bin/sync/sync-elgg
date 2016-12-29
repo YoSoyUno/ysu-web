@@ -1,0 +1,43 @@
+#!/bin/bash
+
+source ../database_auth.sh
+
+BD='ysu_red'
+BDIMPORT='ysu_red'
+SITIO='ysu.redesdepares.org'
+
+echo "ETAPA 1: Vamos a sincronizar la BD y archivos de $SITIO remoto en el servidor local de pruebas..."
+sleep 2s
+
+echo ""
+echo "Volcamos la BD en el servidor"
+ssh $SITIO "rm ~/dump/* && ~/dumpdb.sh $BD"
+
+echo ""
+echo "Copiamos la BD desde el servidor hasta aqui"
+scp $SITIO:~/dump/$BD.sql.bz2 $HOME/tmp
+
+
+echo ""
+echo "Descomprimimos e importamos"
+bunzip2 ~/tmp/$BD.sql.bz2
+mysql --user=$USER --password=$PASS -e "CREATE database if not exists $BDIMPORT;"
+mysql --user=$USER --password=$PASS $BDIMPORT <  $HOME/tmp/$BD.sql
+
+echo ""
+echo "Cambiamos valores de algunas tablas de las BD"
+mysql --user=$USER --password=$PASS --database="$BDIMPORT" -e 'UPDATE elgg_sites_entity SET name = "YOSOY '$VERSION'" WHERE guid = "1";'
+mysql --user=$USER --password=$PASS --database="$BDIMPORT" -e 'UPDATE elgg_sites_entity SET url = "http://'$DOMAIN'/" WHERE guid = "1";'
+mysql --user=$USER --password=$PASS --database="$BDIMPORT" -e 'UPDATE elgg_datalists SET value = "/srv/ysu-web/www/red/" WHERE name = "path";'
+mysql --user=$USER --password=$PASS --database="$BDIMPORT" -e 'UPDATE elgg_datalists SET value = "/srv/ysu-web/files/red/" WHERE name = "dataroot";'
+mysql --user=$USER --password=$PASS --database="$BDIMPORT" -e 'UPDATE elgg_metastrings SET string = "/srv/ysu-web/files/red/" WHERE id = (SELECT value_id    FROM elgg_metadata    WHERE name_id = (       SELECT *       FROM (          SELECT id          FROM elgg_metastrings          WHERE string = "filestore::dir_root"       ) as ms2    )    LIMIT 1 );'
+mysql --user=$USER --password=$PASS --database="$BDIMPORT" -e 'UPDATE elgg_config SET value = "i:0;" WHERE name = "https_login";'
+
+echo ""
+echo "Borramos los temporales"
+#rm $HOME/tmp/*
+
+echo ""
+echo "ETAPA 2: Vamos a sincronizar algunos directorios con archivos..."
+sleep 2s
+rsync -P -r -a -v -e "ssh -l reevo" --delete $SITIO:/srv/ysu-web/files/red/ /srv/ysu-web/files/red/
