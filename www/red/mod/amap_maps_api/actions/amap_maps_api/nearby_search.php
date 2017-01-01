@@ -150,6 +150,10 @@ if ($entities) {
     }
 
 
+    error_log('##################### muestra array:');
+    //error_log(echo json_encode($entities));
+    //error_log( print_r($entities, TRUE) );
+
 
     foreach ($entities as $e) {
 
@@ -184,6 +188,10 @@ if ($entities) {
             $avatar = elgg_view_entity_icon($e, 'small');
             switch ($object_x['type']) {
               case 'group':
+                // Define el orden del punto en el viaje
+                $object_x['orden'] = $e->orden;
+                $object_x['estado'] = $e->estado;
+
                 $subtitulo = elgg_echo('ysu:nodo');
                 $object_x['info_window'] = $avatar.' <h3><a href="'.$object_x['url'].'">'.$object_x['title'].'</a></h3>';
                 //$object_x['info_window'] .= ($object_x['location']?''.$object_x['location']:'');

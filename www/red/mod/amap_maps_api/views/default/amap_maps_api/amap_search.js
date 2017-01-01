@@ -58,6 +58,16 @@ define(function (require) {
         rotation: 0
     }
 
+    var icon_nodo_completo = {
+        path: "m 17.333333,27.940003 c -5.948001,0 -10.7693329,-4.820001 -10.7693329,-10.768003 0,-5.950666 4.8213319,-10.7706632 10.7693329,-10.7706632 5.946663,0 10.769333,4.8199972 10.769333,10.7706632 0,5.948002 -4.82267,10.768003 -10.769333,10.768003 M 17.333333,0 C 7.7599976,0 0,7.7600013 0,17.333333 c 0,9.573336 17.333333,30.666668 17.333333,30.666668 0,0 17.333333,-21.093332 17.333333,-30.666668 C 34.666666,7.7600013 26.906665,0 17.333333,0 m 0,13.313333 c -2.128002,0 -3.857333,1.730668 -3.857333,3.857333 0,2.126668 1.729331,3.856003 3.857333,3.856003 2.126665,0 3.857333,-1.729335 3.857333,-3.856003 0,-2.126665 -1.730668,-3.857333 -3.857333,-3.857333 z",
+        fillColor: '#e9d9a6',
+        fillOpacity: 1,
+        anchor: new google.maps.Point(17,48),
+        strokeWeight: 1,
+        scale: .8,
+        rotation: 0
+    }
+
     var icon_activacion_ysu = {
         path: "M23.7 0v1.7H0l5.5 10.7L0 23h23.7v25h3V0z",
         fillColor: '#fff',
@@ -198,6 +208,7 @@ define(function (require) {
                         var lines = new Array(100);
                         var first = true;
                         var viaje = new Array(100);
+                        var markers_groups = new Array();
 
                         $('#map_location').html(result.location);
                         $('#map_radius').html(result.radius);
@@ -246,6 +257,8 @@ define(function (require) {
 
                         var result_x = result.map_objects;
 
+
+
                         $.each($.parseJSON(result_x), function (item, value) {
 
                             var myLatlng = new google.maps.LatLng(value.lat,value.lng);
@@ -258,7 +271,11 @@ define(function (require) {
                                 var icono = value.map_icon;
                                 break;
                               case 'group':
-                                var icono = icon_nodo;
+                                if (value.estado === 'Incompleto') {
+                                  var icono = icon_nodo;
+                                } else {
+                                  var icono = icon_nodo_completo;
+                                }
                                 break;
                               case 'objectevent':
                                 mostrar = false;
@@ -286,10 +303,16 @@ define(function (require) {
                                 type: tipo,
                                 event_type: value.event_type,
                                 event_group: value.event_group,
+
+                                orden: value.orden,
+                                estado: value.estado,
+
                                 optimized: false,
                                 visible: mostrar,
                                 id: 'marker_'+value.guid
                             });
+
+
 
                             var myoverlay = new google.maps.OverlayView();
                             myoverlay.draw = function () {
@@ -297,35 +320,10 @@ define(function (require) {
                             };
                             myoverlay.setMap(map);
 
-                            // console.log(value);
-
-                            // Dibuja lineas entre grupos
-
-                            for (var i = 0; i < markers.length; i++) {
-                              if (first) {
-                                var anterior = markers[i].position;
-                                first = false;
-                              } else {
-                                if (markers[i].type === 'group') {
-                                  viaje[i] = new google.maps.Polyline({
-                                      path: [markers[i].position, anterior],
-                                      strokeColor: "#eac55d",
-                                      strokeOpacity: 0.2,
-                                      strokeWeight: 7,
-                                      geodesic: true,
-                                  });
-                                  var anterior = markers[i].position;
-                                  viaje[i].setMap(map);
-                                  // console.log(line);
-                                }
-
-                              }
+                            // console.log(marker);
 
 
-                            if (this.type === 'group') {
-                              var currentGroup = this.guid;
-                              }
-                            }
+
 
                             google.maps.event.addListener(marker, 'click', function() {
                                 infowindow.close();
@@ -403,6 +401,46 @@ define(function (require) {
                             }
 
                         });
+
+
+                        // Dibuja lineas entre grupos
+
+                        for (var i = 0; i < markers.length; i++) {
+                          if (markers[i].type === 'group') {
+                            markers_groups.push(markers[i]);
+                          }
+                        }
+                        markers_groups.sort(function(a,b) {return (a.orden > b.orden) ? 1 : ((b.orden > a.orden) ? -1 : 0);} );
+
+                        for (var i = 0; i < markers_groups.length; i++) {
+                          if (markers_groups[i].type === 'group') {
+
+                            if (markers_groups[i].estado === 'Incompleto') {
+                              var line_color = "#e9d9a6";
+                            } else {
+                              var line_color = "#eac55d";
+                            }
+
+                            j = i + 1;
+                            if (j != markers_groups.length) {
+                              viaje[i] = new google.maps.Polyline({
+                                path: [markers_groups[i].position, markers_groups[j].position],
+                                strokeColor: line_color,
+                                strokeOpacity: 0.8,
+                                strokeWeight: 7,
+                                geodesic: true,
+                              });
+                              var anterior = markers_groups[i].position;
+                              viaje[i].setMap(map);
+                              // console.log(line);
+
+                            }
+                          }
+                        }
+
+
+
+
                         // If in Global Map
 
                         if ((document.getElementById("map_indextable") == null) && (map_settings['cluster'])) {
