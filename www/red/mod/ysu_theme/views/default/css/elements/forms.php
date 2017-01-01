@@ -30,9 +30,9 @@ fieldset > div:last-child {
 	padding: 10px 0;
 }
 
-label {	
+label {
 	color: #333;
-	display: block;
+	display: inline-block;
 }
 
 label.elgg-state-disabled {
@@ -82,7 +82,7 @@ input[type="radio"] {
 }
 select {
 	max-width: 100%;
-	padding: 4px; 
+	padding: 4px;
 }
 .elgg-form-account {
 	margin-bottom: 15px;
@@ -368,4 +368,3 @@ select {
 	color: #0054A7;
 	background: #E4ECF5;
 }
-
