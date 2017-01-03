@@ -66,7 +66,7 @@ function ysu_theme_init() {
 
 	// Register page handler
 	elgg_unregister_page_handler('activity', 'elgg_river_page_handler');
-	elgg_register_page_handler('activity', 'river_auto_update_page_handler');
+	elgg_register_page_handler('activity', 'river_auto_update_page_handler_ysu');
 
 
 	//reset action
@@ -100,7 +100,7 @@ function ysu_theme_index() {
 	return true;
 }
 
-function river_auto_update_page_handler($page) {
+function river_auto_update_page_handler_ysu($page) {
 	$base = elgg_get_plugins_path() . 'ysu_theme';
 
 	elgg_set_page_owner_guid(elgg_get_logged_in_user_guid());
