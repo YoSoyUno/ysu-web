@@ -36,7 +36,10 @@ elgg_load_js('landing_page_script');
                         <div class="hero-unit">
                             <h1><?php echo "YOSOY" ?></h1>
 
-                            <h3><?php echo "Versión de pruebas" ?></h3>
+                            <h3><?php echo "Versión de pruebas" ?><br/>
+                            <small><?php $conf['site_footer'] .= shell_exec("cd /srv/ysu-web/ && git log -1 --pretty=format:'%h (%ci)' --abbrev-commit"); $conf['site_footer'] .= '</em></p>';
+echo $conf['site_footer']; ?></small></h3>
+
                         </div>
                     </div>
                 </div>
