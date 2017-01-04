@@ -461,7 +461,11 @@ h1, h2, h3, h4, h5, h6 {
  }
 
 .profile-details {
-	padding: 0px
+	padding: 0px;
+}
+
+#profile-details {
+	margin-top: 0;
 }
 
 .elgg-profile-name{
