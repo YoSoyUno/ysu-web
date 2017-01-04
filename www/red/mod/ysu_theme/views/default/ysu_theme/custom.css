@@ -1,8 +1,13 @@
 #map_indextable,
 #open-slidebar .fa-close,
 #body-globalmap .nearby_search_form,
-#body-globalmap .elgg-head {
-  display: none;
+#body-globalmap .elgg-head,
+#body-profile .profile.elgg-col-1of3,
+.elgg-menu-item-thewire,
+.elgg-menu-item-photos,
+.elgg-menu-item-photo-albums,
+.elgg-menu-item-events {
+  display: none !important;
 }
 
 /*Mapa completo*/
@@ -15,7 +20,7 @@
 #body-globalmap .elgg-main {
   padding: 0;
 }
-#map {
+#body-globalmap #map {
   border:none;
   height: 100vh !important;
 }
