@@ -42,7 +42,7 @@
 	background: #d0c39a;
 }
 
-#map img[src^='http://red.yosoyuno.dev/serve-file/'], #map img[src^='http://red.yosoyuno.dev/cache/0/default/icons/user/'] {
+#map img[src*='/serve-file/'], #map img[src*='/cache/0/default/icons/user/'] {
     border-radius: 50%;
 		border: 3px solid #fff;
 }
