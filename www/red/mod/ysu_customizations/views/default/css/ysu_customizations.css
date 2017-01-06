@@ -1,0 +1,5 @@
+/*Oculta campos extras del profile del grupo */
+
+.groups-profile-fields .estado, .groups-profile-fields .orden {
+  display: none;
+}
