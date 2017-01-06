@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin_manifest xmlns="http://www.elgg.org/plugin_manifest/1.8">
-	<name>YSU theme</name>
+	<name>YSU Tema Visual</name>
 	<id>ysu_theme</id>
 	<author>Fundación Arsayian</author>
 	<version>1.0</version>
