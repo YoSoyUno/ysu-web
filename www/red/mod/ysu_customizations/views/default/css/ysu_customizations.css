@@ -3,3 +3,22 @@
 .groups-profile-fields .estado, .groups-profile-fields .orden {
   display: none;
 }
+
+/*Imagen destacada de grupo*/
+
+.event-manager-event-banner {
+  min-height: 200px;
+  width: 100%;
+  background-size: cover;
+  display: block;
+  float: left;
+  background-position: center;
+}
+
+#body-events .elgg-module {
+  overflow: visible;
+}
+
+#body-events #event-manager-gmaps-location {
+  margin-top: 20px;
+}
