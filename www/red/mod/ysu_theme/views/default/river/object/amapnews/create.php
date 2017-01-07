@@ -12,6 +12,3 @@ echo elgg_view('river/elements/layout-news', array(
     'message' => $excerpt,
     //'attachments' => elgg_view('output/url', array('href' => $object->address)),
 ));
-
-
-
