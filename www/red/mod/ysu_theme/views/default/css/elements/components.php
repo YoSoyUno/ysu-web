@@ -36,7 +36,6 @@ $content_button_color = elgg_get_plugin_setting('content_button_color', 'ysu_the
 }
 .elgg-list > li {
 	border: 15px 0;
-	border-bottom: 1px solid #dcdcdc;
 	margin-top: 10px;
 }
 .elgg-item h3 a {
@@ -180,14 +179,14 @@ $content_button_color = elgg_get_plugin_setting('content_button_color', 'ysu_the
 	margin-top: 5px;
 }
 .elgg-river-layout .elgg-list-river {
-	margin-top: 10px;	
+	margin-top: 10px;
 }
 .elgg-list-river > li {
-	border: 1px solid #DCDCDC;
+	/* border: 1px solid #DCDCDC; */
 	background: #FFFFFF;
-	margin: 0 0 15px ;
-	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
-	/*padding: 5px 10px;*/
+	margin: 0 0 15px;
+	box-shadow: 0 0px 8px 1px rgba(0, 0, 0, 0.5);
+	/* padding: 5px 10px; */
 }
 
 .elgg-list-river .elgg-image {
@@ -353,7 +352,7 @@ $content_button_color = elgg_get_plugin_setting('content_button_color', 'ysu_the
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
-	
+
 	max-width: 100%;
 	height: auto;
 }
