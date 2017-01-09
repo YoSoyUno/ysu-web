@@ -79,7 +79,7 @@ if ($container instanceof ElggGroup && $container->guid != elgg_get_page_owner_g
 }
 
 $banner_image = amapnews_getEntityIconUrl($item->object_guid, 'default');
-$banner = "<a href='{$object->getURL()}' class='river-item-banner' style='background-image: url(\"{$banner_image}\")'><header><span>{$timestamp}</span><h1>$object->title</h1></header></a>";
+$banner = "<div><a href='{$object->getURL()}' class='river-item-banner' style='background-image: url(\"{$banner_image}\")'><header><span>{$timestamp}</span><h1>$object->title</h1></header></a></div>";
 
 // echo <<<RIVER
 // <div class="elgg-river-summary">$summary $group_string <span class="elgg-river-timestamp">$timestamp</span></div>
