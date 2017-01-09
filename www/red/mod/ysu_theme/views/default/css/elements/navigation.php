@@ -485,6 +485,7 @@ $slidebar_a_color = elgg_get_plugin_setting('slidebar_a_color', 'ysu_theme');
   height: 16px;
   line-height: 16px;
   margin: 5px;
+	border-radius: 5px;
 }
 .elgg-menu-river > li {
 	display: inline-block;
@@ -621,11 +622,11 @@ html.sb-static .sb-slidebar,
 	.sb-slidebar {
 		width: 30%;
 	}
-	
+
 	.sb-width-thin {
 		width: 15%;
 	}
-	
+
 	.sb-width-wide {
 		width: 45%;
 	}
@@ -634,11 +635,11 @@ html.sb-static .sb-slidebar,
 	.sb-slidebar {
 		width: 70%;
 	}
-	
+
 	.sb-width-thin {
 		width: 55%;
 	}
-	
+
 	.sb-width-wide {
 		width: 85%;
 	}
@@ -648,11 +649,11 @@ html.sb-static .sb-slidebar,
 	.sb-slidebar {
 		width: 55%;
 	}
-	
+
 	.sb-width-thin {
 		width: 40%;
 	}
-	
+
 	.sb-width-wide {
 		width: 70%;
 	}
@@ -662,11 +663,11 @@ html.sb-static .sb-slidebar,
 	.sb-slidebar {
 		width: 40%;
 	}
-	
+
 	.sb-width-thin {
 		width: 25%;
 	}
-	
+
 	.sb-width-wide {
 		width: 55%;
 	}
@@ -676,11 +677,11 @@ html.sb-static .sb-slidebar,
 	.sb-slidebar {
 		width: 30%;
 	}
-	
+
 	.sb-width-thin {
 		width: 15%;
 	}
-	
+
 	.sb-width-wide {
 		width: 45%;
 	}
@@ -690,11 +691,11 @@ html.sb-static .sb-slidebar,
 	.sb-slidebar {
 		width: 20%;
 	}
-	
+
 	.sb-width-thin {
 		width: 5%;
 	}
-	
+
 	.sb-width-wide {
 		width: 35%;
 	}
@@ -716,9 +717,7 @@ html.sb-static .sb-slidebar,
 /* --------------------
  * 005 - Helper Classes
  */
- 
-.sb-hide { 
+
+.sb-hide {
 	display: none; /* Optionally applied to control classes when Slidebars is disabled over a certain width. */
 }
-
-

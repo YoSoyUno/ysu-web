@@ -181,12 +181,21 @@ $content_button_color = elgg_get_plugin_setting('content_button_color', 'ysu_the
 .elgg-river-layout .elgg-list-river {
 	margin-top: 10px;
 }
+
 .elgg-list-river > li {
+	width: 50%;
+	float: left;
+}
+
+.elgg-list-river > li > div {
 	/* border: 1px solid #DCDCDC; */
 	background: #FFFFFF;
 	margin: 0 0 15px;
 	box-shadow: 0 0px 8px 1px rgba(0, 0, 0, 0.5);
 	/* padding: 5px 10px; */
+	box-sizing: border-box;
+	margin: 0 5px;
+	border-radius: 5px;
 }
 
 .elgg-list-river .elgg-image {
