@@ -4,6 +4,7 @@
  *
  * @package YSU theme
  */
+ require_once(dirname(__FILE__) . '/lib/functions.php');
 
 elgg_register_event_handler('init','system','ysu_theme_init');
 
