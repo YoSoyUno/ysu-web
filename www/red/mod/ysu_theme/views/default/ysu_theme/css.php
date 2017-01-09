@@ -99,6 +99,22 @@ $content_button_color = elgg_get_plugin_setting('content_button_color', 'ysu_the
 .elgg-river-item input[type="text"] {
     width: 84%;
 	}
+
+/* ***************************************
+	FRONT PAGE
+*****************************************/
+
+#body-activity .elgg-sidebar {
+	display: none;
+}
+
+#body-activity .elgg-main {
+	width: auto;
+}
+
+
+
+
 /* ***************************************
 	RESPONSIVE
 *****************************************/
@@ -306,6 +322,12 @@ html {
 	}
 
 @media (max-width: 600px) {
+
+	.elgg-list-river > li {
+		width: 100%;
+		float: left;
+	}
+
 	.groups-profile-fields {
 		float: left;
 		padding-left: 0;

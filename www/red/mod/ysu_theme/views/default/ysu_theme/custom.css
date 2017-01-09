@@ -56,9 +56,19 @@
 	margin-right: 10px;
 }
 
+
+/*RIVER */
+
+#body-activity .elgg-item-object-amapnews {
+
+    /* padding: 5px 10px; */
+  box-sizing: border-box;
+  width: 100%;
+}
+
 .river-item-banner {
   min-height: 300px;
-  width: 100%;
+  /*width: 100%;*/
   /*background-size: cover;
   background-position-x: center;*/
   display: block;
@@ -69,6 +79,8 @@
   -moz-transition: all .5s;
   -o-transition: all .5s;
   transition: all .5s;
+  box-sizing: border-box;
+  border-radius: 5px;
 }
 
 .river-item-banner:hover {
@@ -124,4 +136,9 @@
   position: relative;
   z-index: 1;
   font-weight: bold;
+}
+
+
+.tidypics-river-list .tidypics-photo-item:first-child img {
+  width: 100%;
 }
