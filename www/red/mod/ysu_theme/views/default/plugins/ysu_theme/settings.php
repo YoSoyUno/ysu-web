@@ -21,13 +21,29 @@ $theme_settings = array('topbar' => array('topbar_background_color','topbar_a_co
 		<li>5. Activate your cache settings	</li>
 	</ul>
 </div><br>
+
+
+
 <h4>Settings</h4>
 <table style="border:0px;width:80%; margin:10px">
+<tr>
+	<td style="width:40%; padding:5px;">
+		<?php echo elgg_echo('ysu_theme:settings:viajero'); ?> 		
+	</td>
+	<td style="width:60%; padding-bottom:5px;">
+		<?php echo elgg_view('input/text', array(
+								'name' => 'params[viajeros]',
+								'value' => $vars['entity']->viajeros,
+								'id' => 'ysu_theme_viajeros'
+							)); ?>
+	</td>
+</tr>
+
 	<tr>
 		<td style="width:40%; padding:5px;">
 			<?php echo elgg_echo('ysu_theme:settings:background_type'); ?>
 		</td>
-		<td style="width:60%; padding-bottom:5px;">		
+		<td style="width:60%; padding-bottom:5px;">
 			<?php echo elgg_view('input/select', array(
 											'name' => 'params[background_type]',
 											'value' => $vars['entity']->background_type,
@@ -40,7 +56,7 @@ $theme_settings = array('topbar' => array('topbar_background_color','topbar_a_co
 		<td style="width:40%; padding:5px;">
 			<?php echo elgg_echo('ysu_theme:settings:extractability'); ?>
 		</td>
-		<td style="width:60%; padding-bottom:5px;">	
+		<td style="width:60%; padding-bottom:5px;">
 			<?php echo elgg_view('input/select', array(
 											'name' => 'params[extractability]',
 											'value' => $vars['entity']->extractability,
@@ -56,28 +72,28 @@ $theme_settings = array('topbar' => array('topbar_background_color','topbar_a_co
  	<?php foreach ($attrs as $key => $value): ?>
 		<tr>
 			<td style="width:40%; padding:5px;">
-				<?php echo elgg_echo('ysu_theme:settings:'.$value); ?> 		
+				<?php echo elgg_echo('ysu_theme:settings:'.$value); ?>
 			</td>
-			<td style="width:60%; padding-bottom:5px;">							
+			<td style="width:60%; padding-bottom:5px;">
 				<?php echo elgg_view('input/text', array(
 									  'name' => 'params['.$value.']',
 									  'value' => $vars['entity']->$value,
-									  'id' => 'ysu_theme_'.$value, 
+									  'id' => 'ysu_theme_'.$value,
 									  'class' => 'color'
-									)); ?>			
+									)); ?>
 			</td>
-		</tr>	
+		</tr>
  	<?php endforeach ?>
 <?php endforeach ?>
 	<tr>
 		<td style="width:40%; padding:10px 0;">
 		Set to default settings values</td>
-		<td style="padding:10px 0;">		
-		<?php 		
+		<td style="padding:10px 0;">
+		<?php
 		$action = elgg_add_action_tokens_to_url("/action/ysu_theme/reset");
 		 ?>
 		 <a href="<?php echo $action ?>" class="" style="color:red">
-			RESET		 	
+			RESET
 		 </a>
 		</td>
 	</tr>
@@ -87,39 +103,39 @@ $theme_settings = array('topbar' => array('topbar_background_color','topbar_a_co
  	</tr>
 	<tr>
 			<td style="width:40%; padding:5px;">
-				<?php echo elgg_echo('ysu_theme:settings:header_code'); ?> 		
+				<?php echo elgg_echo('ysu_theme:settings:header_code'); ?>
 			</td>
-			<td style="width:60%; padding-bottom:5px;">							
+			<td style="width:60%; padding-bottom:5px;">
 				<?php echo elgg_view('input/plaintext', array(
 									  'name' => 'params[header_code]',
 									  'value' => $vars['entity']->header_code,
-									  'id' => 'ysu_theme_header_code', 
-									)); ?>			
+									  'id' => 'ysu_theme_header_code',
+									)); ?>
 			</td>
 	</tr>
 	<tr>
 			<td style="width:40%; padding:5px;">
-				<?php echo elgg_echo('ysu_theme:settings:footer_code'); ?> 		
+				<?php echo elgg_echo('ysu_theme:settings:footer_code'); ?>
 			</td>
-			<td style="width:60%; padding-bottom:5px;">							
+			<td style="width:60%; padding-bottom:5px;">
 				<?php echo elgg_view('input/plaintext', array(
 									  'name' => 'params[footer_code]',
 									  'value' => $vars['entity']->footer_code,
-									  'id' => 'ysu_theme_footer_code', 
+									  'id' => 'ysu_theme_footer_code',
 									  'cols' =>80
-									)); ?>			
+									)); ?>
 			</td>
 	</tr>
 	<tr>
 			<td style="width:40%; padding:5px;">
-				<?php echo elgg_echo('ysu_theme:settings:sidebar_code'); ?> 		
+				<?php echo elgg_echo('ysu_theme:settings:sidebar_code'); ?>
 			</td>
-			<td style="width:60%; padding-bottom:5px;">							
+			<td style="width:60%; padding-bottom:5px;">
 				<?php echo elgg_view('input/plaintext', array(
 									  'name' => 'params[sidebar_code]',
 									  'value' => $vars['entity']->sidebar_code,
-									  'id' => 'ysu_theme_sidebar_code', 
-									)); ?>			
+									  'id' => 'ysu_theme_sidebar_code',
+									)); ?>
 			</td>
 	</tr>
 </table>
@@ -129,8 +145,7 @@ require(['<?php echo elgg_get_site_url();?>mod/ysu_theme/lib/spectrum/spectrum.j
 
 	  $(".color").spectrum({
     		preferredFormat: "hex",
-    		showInput: true,	
+    		showInput: true,
   		});
 });
 </script>
-
