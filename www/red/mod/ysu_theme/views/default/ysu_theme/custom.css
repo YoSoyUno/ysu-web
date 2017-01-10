@@ -69,8 +69,6 @@
 .river-item-banner {
   min-height: 300px;
   /*width: 100%;*/
-  /*background-size: cover;
-  background-position-x: center;*/
   display: block;
   /*float: left;*/
   position: relative;
@@ -81,6 +79,8 @@
   transition: all .5s;
   box-sizing: border-box;
   border-radius: 5px;
+  background-position-y: center;
+  background-size: cover;
 }
 
 .river-item-banner:hover {
@@ -98,27 +98,9 @@
   left: 0;
   width: 100%;
   padding: 20px 10px;
-  background: inherit;
-  background-position-y: -220px;
-  -webkit-transition: all .5s;
-  -moz-transition: all .5s;
-  -o-transition: all .5s;
-  transition: all .5s;
+  box-sizing: inherit;
 }
-.river-item-banner > header::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: inherit;
-  -webkit-filter: blur(25px);
-  filter: blur(25px);
-  transform: scale(1) translateY(10px);
-  background-position-y: -220px;
-  background: rgba(0, 0, 0, 0.40);
-}
+
 
 .river-item-banner > header > h1 {
   margin: 0;
@@ -128,6 +110,7 @@
   font-weight: bold;
   text-transform: uppercase;
   text-shadow: 0px 0px 10px #000;
+  line-height: 26pt;
 }
 
 .river-item-banner > header > span {
@@ -136,6 +119,7 @@
   position: relative;
   z-index: 1;
   font-weight: bold;
+  text-shadow: 0px 0px 10px #000;
 }
 
 
