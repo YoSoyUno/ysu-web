@@ -56,17 +56,24 @@ foreach ($items as $item) {
 	$li_attrs = ['class' => $item_classes];
 	$guid = $item->object_guid;
 	$item = get_entity($guid);
+
 	if ($item instanceof \ElggEntity) {
 
 		$guid = $item->getGUID();
 		$type = $item->getType();
 		$subtype = $item->getSubtype();
+		$owner = $item->owner_guid;
+		//error_log('el usuario es owner: '.$owner);
+
 
 		$li_attrs['id'] = "elgg-$type-$guid";
 
 		$li_attrs['class'][] = "elgg-item-$type";
 		if ($subtype) {
 			$li_attrs['class'][] = "elgg-item-$type-$subtype";
+		}
+		if (is_viajero($owner)) {
+			$li_attrs['class'][] = "elgg-item-viajero"; 
 		}
 	} else if (is_callable(array($item, 'getType'))) {
 		$li_attrs['id'] = "item-{$item->getType()}-{$item->id}";

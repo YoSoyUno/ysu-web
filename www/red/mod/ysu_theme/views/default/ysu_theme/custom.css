@@ -142,3 +142,11 @@
 .tidypics-river-list .tidypics-photo-item:first-child img {
   width: 100%;
 }
+
+#river_auto_update_loading, #river_auto_update_load_more_button {
+  margin-left: 50% !important;
+  margin-top: 20px !important;
+  float: left !important;
+}
+
+#river_auto_update_load_more_button {display: none !important;}

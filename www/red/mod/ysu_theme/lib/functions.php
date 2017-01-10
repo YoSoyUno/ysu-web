@@ -1,6 +1,14 @@
 <?php
 
-function is_viajero() {
-  $viajeros = elgg_get_plugin_setting('viajeros', 'ysu_theme');
-  return $viajeros;
+function is_viajero($user) {
+
+  $viajeros = explode(",", elgg_get_plugin_setting('viajeros', 'ysu_theme'));
+  foreach ($viajeros as $viajero) {
+    $guid = get_user_by_username($viajero);
+
+    if ($guid->getGUID() == $user) {
+      return true;
+    }
+  return false;
+  }
 }
