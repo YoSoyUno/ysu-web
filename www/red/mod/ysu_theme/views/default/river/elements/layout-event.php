@@ -80,9 +80,9 @@ if ($container instanceof ElggGroup && $container->guid != elgg_get_page_owner_g
 if ($object->getIconURL('event_banner')) {
 	$banner_image = $object->getIconURL('event_banner');
 } else {
+	$banner_image = str_replace(' ', '%20', "https://maps.googleapis.com/maps/api/staticmap?center={$object->location}&zoom=4&scale=false&size=460x400&maptype=satellite&format=png&visual_refresh=true&markers=size:mid%7Ccolor:0xff0000%7Clabel:%7C{$object->location}");
 }
 
-$banner_image = str_replace(' ', '%20', "https://maps.googleapis.com/maps/api/staticmap?center={$object->location}&zoom=4&scale=false&size=460x400&maptype=satellite&format=png&visual_refresh=true&markers=size:mid%7Ccolor:0xff0000%7Clabel:%7C{$object->location}");
 
 
 $event_start = $object->getStartTimestamp();
