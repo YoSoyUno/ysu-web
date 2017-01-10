@@ -486,6 +486,7 @@ $slidebar_a_color = elgg_get_plugin_setting('slidebar_a_color', 'ysu_theme');
   line-height: 16px;
   margin: 5px;
 	border-radius: 5px;
+	float: right;
 }
 .elgg-menu-river > li {
 	display: inline-block;
