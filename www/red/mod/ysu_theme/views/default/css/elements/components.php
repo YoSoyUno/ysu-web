@@ -202,7 +202,7 @@ $content_button_color = elgg_get_plugin_setting('content_button_color', 'ysu_the
 	background: #fff;
 }
 
-.elgg-list-river > .elgg-item-object-thewire.elgg-item-viajero .elgg-river-message {
+.elgg-list-river > .elgg-item-object-thewire.elgg-item-viajero .elgg-river-message, .elgg-list-river > .elgg-item-object-comment.elgg-item-viajero .elgg-river-message {
 	font-size: 18pt;
 }
 

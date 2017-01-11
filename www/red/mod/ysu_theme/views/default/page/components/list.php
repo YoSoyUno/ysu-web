@@ -55,7 +55,10 @@ foreach ($items as $item) {
 
 	$li_attrs = ['class' => $item_classes];
 	$guid = $item->object_guid;
+	$guid_subject = $item->subject_guid;
+	$subject = get_entity($guid_subject);
 	$item = get_entity($guid);
+
 
 	if ($item instanceof \ElggEntity) {
 
@@ -63,7 +66,7 @@ foreach ($items as $item) {
 		$type = $item->getType();
 		$subtype = $item->getSubtype();
 		$owner = $item->owner_guid;
-		//error_log('el usuario es owner: '.$owner);
+		error_log('el usuario es owner: '.$owner);
 
 
 		$li_attrs['id'] = "elgg-$type-$guid";
@@ -72,9 +75,28 @@ foreach ($items as $item) {
 		if ($subtype) {
 			$li_attrs['class'][] = "elgg-item-$type-$subtype";
 		}
-		if (is_viajero($owner)) {
-			$li_attrs['class'][] = "elgg-item-viajero"; 
+
+		if ($owner == 0 AND $type == 'user') {
+			if (is_viajero($guid_subject)) {
+				error_log('el usuario es owner: '.$guid);
+				$li_attrs['class'][] = "elgg-item-viajero";
+			}
+		} else {
+			if ($subtype == 'event' OR $type == 'group' ) {
+				error_log('soy evento y mi subject_guid es: '.$guid_subject);
+
+				if (is_viajero($guid_subject)) {
+					$li_attrs['class'][] = "elgg-item-viajero";
+				}
+			} else {
+				if (is_viajero($owner)) {
+					$li_attrs['class'][] = "elgg-item-viajero";
+				}
+			}
 		}
+
+		$li_attrs['class'][] = "elgg-item-owner-{$owner}";
+
 	} else if (is_callable(array($item, 'getType'))) {
 		$li_attrs['id'] = "item-{$item->getType()}-{$item->id}";
 	}

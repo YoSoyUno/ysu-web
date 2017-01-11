@@ -11,6 +11,6 @@ function is_viajero($user) {
         return true;
       }
     }
-  return false;
   }
+  return false;
 }
