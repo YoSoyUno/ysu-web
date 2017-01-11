@@ -35,7 +35,7 @@ mysql --user=$USER --password=$PASS --database="$BDIMPORT" -e 'UPDATE elgg_confi
 
 echo ""
 echo "Borramos los temporales"
-#rm $HOME/tmp/*
+rm $HOME/tmp/*
 
 echo ""
 echo "ETAPA 2: Vamos a sincronizar algunos directorios con archivos..."
