@@ -33,6 +33,8 @@
 .elgg-avatar {
 	position: relative;
 	display: inline-block;
+	border-radius: 50%;
+	box-shadow: #696969 0px 0px 5px;
 }
 .elgg-avatar > a > img {
 	display: block;
