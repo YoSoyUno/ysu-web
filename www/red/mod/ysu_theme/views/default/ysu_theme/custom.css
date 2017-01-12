@@ -1,3 +1,8 @@
+#body-admin .elgg-menu-page-configure,
+#body-admin .elgg-page-footer,
+#body-admin .elgg-widget-instance-admin-welcome,
+#body-admin .elgg-widget-instance-control-panel,
+#elgg-admin-nav-collapse h2:nth-child(2),
 #map_indextable,
 #open-slidebar .fa-close,
 #body-globalmap .nearby_search_form,
@@ -10,6 +15,9 @@
   display: none !important;
 }
 
+.body-admin .elgg-menu-page-configure, #body-admin .elgg-widget-instance-control-panel, {
+  display: block !important;
+}
 /*Mapa completo*/
 #body-globalmap .elgg-page-default .elgg-page-body > .elgg-inner {
   max-width: 100%;

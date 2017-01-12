@@ -20,6 +20,11 @@ if (isset($vars['body_attrs'])) {
 }
 $context = elgg_get_context();
 $attrs .= " id='body-$context'";
+$user = elgg_get_logged_in_user_entity();
+
+if ($user) {
+	$attrs .= " class=\"body-{$user['username']}\"";
+}
 ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $lang; ?>" lang="<?php echo $lang; ?>">
