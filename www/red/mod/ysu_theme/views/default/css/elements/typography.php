@@ -28,10 +28,16 @@ body {
   font-family: 'Expletus Sans', 'Sans-Serif';
   font-weight: lighter;
 
+	/*
+	DESACTIVADO PORQUE CONSUME RECURSOS A LO LOCO!!!
+
 	background: url('/mod/ysu_theme/graphics/bg.jpg'), linear-gradient(270deg, #e9d9a6, #af974b, #787878);
 	background-size: cover, 2000% 2000%;
-  background-blend-mode: multiply;
-	background-attachment: fixed;
+	background-blend-mode: multiply;
+	background-attachment: fixed;*/
+
+	background: linear-gradient(270deg, #e9d9a6, #af974b, #787878);
+	background-size: 2000% 2000%;
 
 	-webkit-animation: background 45s ease infinite;
 	-moz-animation: background 45s ease infinite;
