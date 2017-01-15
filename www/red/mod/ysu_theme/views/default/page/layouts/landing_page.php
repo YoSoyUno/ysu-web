@@ -1,30 +1,37 @@
 <?php
 
 
+
 // If user logs in then forward to activity
 if (elgg_is_logged_in()) {
     header("Location: activity");
 }
-$top_box = $vars['login'];
 
-//elgg_require_js("ysu_theme/landing_page");
 
-elgg_load_js('jquery');
-elgg_load_js('js_validate');
-elgg_load_js('bootstrap');
-elgg_load_js('modernizr');
-elgg_load_js('scrollTo');
-elgg_load_js('parallax');
-elgg_load_js('landing_page_startup');
-elgg_load_js('landing_page_script');
+//elgg_load_js('jquery');
+// elgg_load_js('js_validate');
+// elgg_load_js('bootstrap');
+//elgg_load_js('modernizr');
+// elgg_load_js('scrollTo');
+// elgg_load_js('parallax');
+// elgg_load_js('landing_page_startup');
+// elgg_load_js('landing_page_script');
 
- ?>
+//elgg_load_css('ink-reset');
 
 
 
-<link rel="stylesheet" href="/mod/ysu_theme/lib/landing_page/bootstrap/css/bootstrap.css">
+?>
+
+
+
+<!-- <link rel="stylesheet" href="/mod/ysu_theme/lib/landing_page/bootstrap/css/bootstrap.css"> -->
 <link rel="stylesheet" href="/mod/ysu_theme/lib/landing_page/css/flat-ui.css">
 <link rel="stylesheet" href="/mod/ysu_theme/lib/landing_page/css/style.css">
+<!-- <link rel="stylesheet" href="/mod/ysu_theme/lib/ink/css/style.css"> -->
+
+
+
 
 <div class="page-wrapper">
             <!-- header-10 -->
@@ -39,6 +46,8 @@ elgg_load_js('landing_page_script');
                             <h3><?php echo "Versión de pruebas" ?><br/>
                             <small><?php $conf['site_footer'] .= shell_exec("cd /srv/ysu-web/ && git log -1 --pretty=format:'%h (%ci)' --abbrev-commit"); $conf['site_footer'] .= '</em></p>';
 echo $conf['site_footer']; ?></small></h3>
+        		                <!-- <a href="#0" class="cd-btn cd-modal-trigger" data-target='modal-login'>Iniciar sesión</a>
+                            <a href="#0" class="cd-btn cd-modal-trigger" data-target='ysu_settings_ayuda'>TEST</a> -->
 
                         </div>
                     </div>
@@ -87,30 +96,6 @@ echo $conf['site_footer']; ?></small></h3>
             </section> -->
 
             <!-- content-7  -->
-            <section class="content-7 v-center login">
-                <div>
-
-                    <div class="container">
-                        <h3>Registrate o Inicia sesión</h3>
-
-                        <div class="row v-center">
-                            <div class="col-sm-4">
-                                <div class="col-sm-offset-2">
-                                     <?php echo elgg_view_module('aside',  elgg_echo('register'), $vars['register']); ?>
-                                </div>
-                            </div>
-                            <div class="col-sm-1">
-
-                            </div>
-                            <div class="col-sm-4">
-                                <div class="col-sm-offset-2">
-                                    <?php echo elgg_view_module('featured',  '', $vars['login'], $mod_params); ?>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
 <!--
             <section class="header-10-sub v-center bg-midnight-blue">
                 <div class="background">
@@ -131,6 +116,7 @@ echo $conf['site_footer']; ?></small></h3>
                 <a class="control-btn fui-arrow-down" href="#"> </a>
             </section>
             -->
+
 
 
 

@@ -12,23 +12,29 @@ $theme_settings = array('topbar' => array('topbar_background_color','topbar_a_co
 ?>
 <link rel="stylesheet" href="<?php echo elgg_get_site_url();?>mod/ysu_theme/lib/spectrum/spectrum.css">
 <div>
-	<h4>Recommendations</h4><br>
-	<ul>
-		<li>1. Disable the cache in Advanced settings</li>
-		<li>2. Edit your color settings here</li>
-		<li>3. Clear the cache from the dashboard</li>
-		<li>4. Verify that the configuration is correct</li>
-		<li>5. Activate your cache settings	</li>
-	</ul>
-</div><br>
 
-
-
-<h4>Settings</h4>
+<h3>Settings</h3>
 <table style="border:0px;width:80%; margin:10px">
+	<tr>
+		<td colspan='2'>
+			<?php echo elgg_echo('ysu_theme:settings:ayuda'); ?>
+		</td>
+	</tr>
+	<tr>
+		<td colspan='2'>
+			<?php
+				echo elgg_view('input/longtext', [
+					'name' => 'params[ysu_settings_ayuda]',
+					'value' => $plugin->ysu_settings_ayuda,
+				]);
+			?>
+		</td>
+	</tr>
+
+
 <tr>
 	<td style="width:40%; padding:5px;">
-		<?php echo elgg_echo('ysu_theme:settings:viajero'); ?> 		
+		<?php echo elgg_echo('ysu_theme:settings:viajero'); ?>
 	</td>
 	<td style="width:60%; padding-bottom:5px;">
 		<?php echo elgg_view('input/text', array(

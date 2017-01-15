@@ -38,10 +38,6 @@ function ysu_theme_init() {
 	$slidebars = elgg_get_simplecache_url('lib/slidebars/slidebars.js');
   elgg_register_js('slidebars', $slidebars, 'footer');
 
-
-	elgg_register_js('flowplayer', elgg_get_simplecache_url('lib/flowplayer/flowplayer.min.js'), 'footer');
-	elgg_register_css('flowplayer', elgg_get_simplecache_url('lib/flowplayer/minimalist.css'));
-
 	elgg_register_js('js_validate', elgg_get_simplecache_url('lib/jquery-validate/jquery.validate.min.js'), 'footer');
 	elgg_register_js('bootstrap', elgg_get_simplecache_url('lib/landing_page/bootstrap/js/bootstrap.min.js'), 'footer');
 	elgg_register_js('modernizr', elgg_get_simplecache_url('lib/landing_page/js/modernizr.custom.js'), 'footer');
@@ -50,7 +46,15 @@ function ysu_theme_init() {
 	elgg_register_js('landing_page_startup', elgg_get_simplecache_url('lib/landing_page/js/startup-kit.js'), 'footer');
 	elgg_register_js('landing_page_script', elgg_get_simplecache_url('lib/landing_page/js/script.js'), 'footer');
 
+  // #### Efecto ink
 
+  // Carga CSS
+  elgg_register_css('ink', '/mod/ysu_theme/lib/ink/css/style.css', 'footer');
+  elgg_load_css('ink');
+
+  // Carga codigo CSS como vista, el cual llama luego a una accion - definida mas abajo
+  elgg_register_simplecache_view('ysu_theme/ink.js');
+  elgg_require_js("ysu_theme/ink");
 
 	//elgg_register_css('font-awesome', 'mod/ysu_theme/lib/font-awesome/css/font-awesome.min.css');
 
@@ -72,7 +76,12 @@ function ysu_theme_init() {
 
 	//reset action
 	$action_base = elgg_get_plugins_path() . 'ysu_theme/actions';
+
 	elgg_register_action("ysu_theme/reset", "$action_base/reset.php");
+
+  // accion de carga de contenidos usada por efecto ink
+  elgg_register_action("ysu_theme/ink", "$action_base/ink.php", 'public');
+
 
 	//cover
 	elgg_register_page_handler('cover', 'elgg_cover_page_handler');
@@ -342,10 +351,11 @@ function ysu_theme_pagesetup() {
 			elgg_register_menu_item('topbar', array(
 				'name' => 'login',
 				'text' => elgg_echo('login'),
-				'href' => $href,
+				'href' => '#',
 				'priority' => 90,
 				'section' => 'alt',
-				'class' => 'btn btn-info elgg-button elgg-button-submit go-login'
+        'data-target' => 'modal-login',
+				'class' => 'btn btn-info elgg-button elgg-button-submit go-login cd-btn cd-modal-trigger'
 			));
 	}
 }
