@@ -5,6 +5,35 @@ define(function(require) {
     jQuery(document).ready(function($){
 
 
+      // Codigo redondo
+      console.log('\n\
+      Soy un perdido eléctrico\n\
+      Del universo eléctrico,\n\
+      Un multitudinario\n\
+      Perdido y sin identidad.\n\
+      \n\
+      Cuido mi tubo-túnel\n\
+      Con DDT galáctico.\n\
+      Y aunque parezca un crimen\n\
+      El monstruo no me muerde más.\n\
+      \n\
+      Yo soy, yo soy, yo soy nadie, yo soy.\n\
+      Yo soy, yo soy, yo soy nadie, yo soy.\n\
+      \n\
+      Y así termina el juego.\n\
+      Boda de los aliados.\n\
+      Abuelitos perversos\n\
+      Timbeándose la eternidad.\n\
+      \n\
+      Cuido mi tubo-túnel\n\
+      Con DDT galáctico.\n\
+      Y aunque parezca un crimen\n\
+      El monstruo no me pisa más\n\
+      \n\
+      Yo soy, yo soy, yo soy nadie, yo soy.\n\
+      Yo soy, yo soy, yo soy nadie, yo soy.\n\\n\\n\
+      ');
+
     	//cache some jQuery objects
     	var modalTrigger = $('.cd-modal-trigger'),
     		transitionLayer = $('.cd-transition-layer'),

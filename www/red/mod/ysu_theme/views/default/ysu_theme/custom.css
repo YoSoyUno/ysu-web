@@ -11,7 +11,8 @@
 .elgg-menu-item-thewire,
 .elgg-menu-item-photos,
 .elgg-menu-item-photo-albums,
-.elgg-menu-item-events {
+.elgg-menu-item-events,
+.elgg-menu-item-register {
   display: none !important;
 }
 
@@ -64,6 +65,10 @@ body.body-admin .elgg-menu-page-configure, body.body-admin .elgg-widget-instance
 	margin-right: 10px;
 }
 
+#body-forgotpassword .elgg-page-body .elgg-layout {
+  margin-top: 6em;
+  background: white;
+}
 
 /*RIVER */
 
