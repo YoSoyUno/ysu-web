@@ -46,8 +46,8 @@ if (elgg_is_logged_in()) {
                             <h3><?php echo "Versión de pruebas" ?><br/>
                             <small><?php $conf['site_footer'] .= shell_exec("cd /srv/ysu-web/ && git log -1 --pretty=format:'%h (%ci)' --abbrev-commit"); $conf['site_footer'] .= '</em></p>';
 echo $conf['site_footer']; ?></small></h3>
-        		                <a href="#0" class="cd-btn cd-modal-trigger" data-target='modal-login'>Iniciar sesión</a>
-                            <a href="#0" class="cd-btn cd-modal-trigger" data-target='ysu_settings_ayuda'>TEST</a>
+        		                <!-- <a href="#0" class="cd-btn cd-modal-trigger" data-target='modal-login'>Iniciar sesión</a>
+                            <a href="#0" class="cd-btn cd-modal-trigger" data-target='ysu_settings_ayuda'>TEST</a> -->
 
                         </div>
                     </div>
@@ -143,10 +143,11 @@ echo $conf['site_footer']; ?></small></h3>
                         <div class="col-sm-3">
                             <h6>Estadísticas</h6>
                             <ul class="address">
-                                <li>XX Puntos</li>
-                                <li>XX Activaciones</li>
-                                <li>XX Encuentros</li>
-                                <li>XX Seres</li>
+                                <?php
+                                $stats = get_entity_statistics(); ?>
+                                <li><?php echo $stats['group']['__base__'] ?> Puntos</li>
+                                <li><?php echo $stats['object']['event'] ?> Activaciones</li>
+                                <li><?php echo get_number_users() ?> Seres</li>
                             </ul>
                         </div>
                     </div>
