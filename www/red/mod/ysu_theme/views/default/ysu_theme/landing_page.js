@@ -5,6 +5,4 @@ define(function(require) {
 
     //$('body').append(elgg.echo('hello_world'));
 
-
-    console.log('cargo');
 });
