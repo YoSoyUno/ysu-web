@@ -28,12 +28,14 @@ body {
   font-family: 'Expletus Sans', 'Sans-Serif';
   font-weight: lighter;
 
-	background: linear-gradient(270deg, #e9d9a6, #af974b, #787878);
-	background-size: 2000% 2000%;
+	background: url('/mod/ysu_theme/graphics/bg.jpg'), linear-gradient(270deg, #e9d9a6, #af974b, #787878);
+	background-size: cover, 2000% 2000%;
+  background-blend-mode: multiply;
+	background-attachment: fixed;
 
-	-webkit-animation: background 30s ease infinite;
-	-moz-animation: background 30s ease infinite;
-	animation: background 30s ease infinite;
+	-webkit-animation: background 45s ease infinite;
+	-moz-animation: background 45s ease infinite;
+	animation: background 45s ease infinite;
 }
 
 @-webkit-keyframes background {
