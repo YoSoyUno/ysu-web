@@ -3,6 +3,9 @@
 return array (
   'ysu:boxhome:compartir' => 'Comparte',
   'ysu:boxhome:description' => 'Envia un mensaje y haz llegar tu voz a toda la Red...',
+  'ysu:login:title1' => 'Conectate a la red ...',
+  'ysu:login:title2' => 'o Registrate como un Ser',
+  'ysu:login:close' => 'Cerrar',
 
   'activity' => 'La Red',
 
@@ -12,16 +15,14 @@ return array (
   'thewire:posted' => "Tu mensaje ha sido publicado exitosamente a La Red.",
   'thewire:notify:reply' => '%s ha respondido a %s en La Red:',
 
-
   'amap_maps_api:all' => 'El camino',
-  'amap_maps_api:menu' => 'El camino',
   'amap_maps_api:menu' => 'El camino',
 
   'profile:show' => 'Información del Ser',
 
   'amapnews:group' => 'Noticias del Punto',
-  'event_manager:menu:group_events' => 'Eventos del Punto',
 
+  'event_manager:menu:group_events' => 'Eventos del Punto',
   'event_manager_ysu:activacion_principal' => 'Activacion principal',
 
 ////////////////// PUNTOS (groups)
