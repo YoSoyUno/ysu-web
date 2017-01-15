@@ -31,7 +31,9 @@ define(function(require) {
       El monstruo no me pisa más\n\
       \n\
       Yo soy, yo soy, yo soy nadie, yo soy.\n\
-      Yo soy, yo soy, yo soy nadie, yo soy.\n\\n\\n\
+      Yo soy, yo soy, yo soy nadie, yo soy.\n\
+      \n\
+      \n\
       ');
 
     	//cache some jQuery objects
