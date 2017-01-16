@@ -4,7 +4,8 @@ define(function(require) {
 
     jQuery(document).ready(function($){
 
-
+      $( document ).tooltip();
+      
       // Codigo redondo
       console.log('\n\
       Soy un perdido eléctrico\n\

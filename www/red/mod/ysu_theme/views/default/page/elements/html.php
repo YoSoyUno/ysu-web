@@ -64,6 +64,7 @@ if ($user) {
 		<script type="text/javascript">
 		<?php //echo elgg_get_plugin_setting('header_code', 'ysu_theme') ?>
 		</script>
+		
 		<!-- <script type="text/javascript" src="/mod/ysu_theme/views/default/lib/slidebars/slidebars.js"></script> -->
 	</head>
 	<body<?php echo $attrs ?>>

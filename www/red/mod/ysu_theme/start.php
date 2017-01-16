@@ -52,6 +52,10 @@ function ysu_theme_init() {
   elgg_register_css('ink', '/mod/ysu_theme/lib/ink/css/style.css', 'footer');
   elgg_load_css('ink');
 
+  elgg_register_css('jquery-ui', '/mod/ysu_theme/lib/jquery-ui/jquery-ui.css', 'footer');
+  elgg_load_css('jquery-ui');
+
+
   // Carga codigo CSS como vista, el cual llama luego a una accion - definida mas abajo
   elgg_register_simplecache_view('ysu_theme/ink.js');
   elgg_require_js("ysu_theme/ink");
