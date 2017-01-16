@@ -16,7 +16,7 @@
   display: none !important;
 }
 
-body.body-admin .elgg-menu-page-configure, body.body-admin .elgg-widget-instance-control-panel {
+body.body-admin .elgg-menu-page-configure, body.body-admin .elgg-widget-instance-control-panel, body.body-german .elgg-menu-page-configure, body.body-german .elgg-widget-instance-control-panel {
   display: block !important;
 }
 /*Mapa completo*/
