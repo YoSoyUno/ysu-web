@@ -40,18 +40,17 @@ if ($user) {
 		<style type="text/css">
 		<?php //if (elgg_is_logged_in() && elgg_get_context()!='admin') : ?>
 		@media (max-width: 820px) {
-				.logo, .elgg-sidebar{
-					display: none;
-				}
+			.elgg-avatar-topbar, .elgg-sidebar{
+				display: none;
+			}
 
-				.sliderbar-user-menu {
-					display: block;
-				}
+			.sliderbar-user-menu {
+				display: block;
+			}
 
 		}
 		@media (max-width: 600px) {
-
-			.elgg-avatar-topbar, .logo, .elgg-sidebar{
+			.elgg-avatar-topbar, .elgg-sidebar{
 				display: none;
 			}
 
@@ -64,7 +63,7 @@ if ($user) {
 		<script type="text/javascript">
 		<?php //echo elgg_get_plugin_setting('header_code', 'ysu_theme') ?>
 		</script>
-		
+
 		<!-- <script type="text/javascript" src="/mod/ysu_theme/views/default/lib/slidebars/slidebars.js"></script> -->
 	</head>
 	<body<?php echo $attrs ?>>
