@@ -1560,6 +1560,10 @@ section * {
   background: #2c3e50;
   color: #bdc3c7;
 }
+.footer-3 small {
+  font-size: 11pt;
+}
+
 .footer-3.v-center,
 .footer-3 .v-center {
   display: table;
@@ -1661,12 +1665,12 @@ section * {
   line-height: 1.6;
 }
 @media (max-width: 767px) {
-  .footer-3 .row > [class*="col-sm-"] {
+  /*.footer-3 .row > [class*="col-sm-"] {
     margin-top: 30px;
   }
   .footer-3 .row > [class*="col-sm-"]:first-child {
     margin-top: 0;
-  }
+  }*/
 }
 .header-10-sub .background {
   background-image: url("../img/img-1.jpg");

@@ -42,10 +42,7 @@ if (elgg_is_logged_in()) {
                     <div class="container">
                         <div class="hero-unit">
                             <h1><?php echo "YOSOY" ?></h1>
-
-                            <h3><?php echo "Versión de pruebas" ?><br/>
-                            <small><?php $conf['site_footer'] .= shell_exec("cd /srv/ysu-web/ && git log -1 --pretty=format:'%h (%ci)' --abbrev-commit"); $conf['site_footer'] .= '</em></p>';
-echo $conf['site_footer']; ?></small></h3>
+                            <h3><?php echo elgg_echo('ysu:frontpage:subtitle'); ?></h3>
         		                <!-- <a href="#0" class="cd-btn cd-modal-trigger" data-target='modal-login'>Iniciar sesión</a>
                             <a href="#0" class="cd-btn cd-modal-trigger" data-target='ysu_settings_ayuda'>TEST</a> -->
 
@@ -135,7 +132,9 @@ echo $conf['site_footer']; ?></small></h3>
                 <div class="container">
                     <div class="row v-center">
                         <div class="col-sm-2">
-                            <a class="brand" href="#"><?php echo elgg_get_config('sitename') ?></a>
+                            <div class="brand"><?php echo elgg_get_config('sitename') ?><br/>
+                              <small><?php echo shell_exec("cd /srv/ysu-web/ && git describe");?></small>
+                            </div>
                         </div>
                         <div class="col-sm-7">
                              <?php echo elgg_view_menu('footer', array('sort_by' => 'priority', 'class' => 'elgg-menu-hz')); ?>
