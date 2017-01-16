@@ -1,13 +1,13 @@
 [red-ysu]
 
-user = reevo
+user = ysu
 group = www-data
 
 listen = /srv/ysu-web/run/red.socket
 access.log = /srv/ysu-web/log/red/php_fpm-red.access.log
 slowlog = /srv/ysu-web/log/red/php_fpm-red.slow.log
 
-listen.owner    = reevo
+listen.owner    = ysu
 listen.group    = www-data
 listen.mode     = 0660
 
