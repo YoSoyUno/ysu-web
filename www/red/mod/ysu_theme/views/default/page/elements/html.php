@@ -27,16 +27,13 @@ if ($user) {
 	$attrs .= " class=\"body-{$user['username']}\"";
 }
 
-
-
-
 ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $lang; ?>" lang="<?php echo $lang; ?>">
 	<head>
 		<?php echo $vars["head"]; ?>
 
-		<!-- <link href='//fonts.googleapis.com/css?family=Expletus+Sans:400,700' rel='stylesheet' type='text/css'> -->
+		<link href="https://fonts.googleapis.com/css?family=Expletus+Sans:400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 		<style type="text/css">
 		<?php //if (elgg_is_logged_in() && elgg_get_context()!='admin') : ?>
 		@media (max-width: 820px) {
