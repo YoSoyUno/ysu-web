@@ -225,14 +225,15 @@ function ysu_theme_pagesetup() {
 		}
 
 		elgg_unregister_menu_item('topbar', 'friends');
-		elgg_register_menu_item('topbar', array(
-			'href' => $href,
-			'name' => 'friends',
-			'text' =>  $text,
-			'section' => 'alt',
-			'priority' => 200,
-			'title' => $tooltip,
-		));
+
+		// elgg_register_menu_item('topbar', array(
+		// 	'href' => $href,
+		// 	'name' => 'friends',
+		// 	'text' =>  $text,
+		// 	'section' => 'alt',
+		// 	'priority' => 200,
+		// 	'title' => $tooltip,
+		// ));
 
 		$viewer = elgg_get_logged_in_user_entity();
 		elgg_unregister_menu_item('topbar', 'profile');
@@ -251,12 +252,16 @@ function ysu_theme_pagesetup() {
 			'item_class' => 'elgg-avatar elgg-avatar-topbar',
 		));
 
+    // Boton de donar
 		elgg_register_menu_item('topbar', array(
-			'name' => 'home',
-			'text' => '<i class="fa fa-home fa-lg"></i> ',
-			'href' => "/",
+			'name' => 'donate',
+			'text' => '<i class="fa fa-heart fa-lg"></i> ',
+			'href' => "#",
 			'priority' => 90,
-			'section' => 'alt',
+      'title' => 'Dona ahora',
+      'data-target' => 'ysu_settings_donar',
+      'class' => 'cd-modal-trigger',
+			'section' => 'alt'
 		));
 
 		elgg_register_menu_item('topbar', array(

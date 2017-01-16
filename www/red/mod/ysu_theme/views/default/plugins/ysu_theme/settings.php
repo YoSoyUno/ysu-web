@@ -13,7 +13,8 @@ $theme_settings = array('topbar' => array('topbar_background_color','topbar_a_co
 <link rel="stylesheet" href="<?php echo elgg_get_site_url();?>mod/ysu_theme/lib/spectrum/spectrum.css">
 <div>
 
-<h3>Settings</h3>
+<h3>Configuraciones</h3>
+
 <table style="border:0px;width:80%; margin:10px">
 	<tr>
 		<td colspan='2'>
@@ -30,6 +31,23 @@ $theme_settings = array('topbar' => array('topbar_background_color','topbar_a_co
 			?>
 		</td>
 	</tr>
+
+	<tr>
+		<td colspan='2'>
+			<?php echo elgg_echo('ysu_theme:settings:donar'); ?>
+		</td>
+	</tr>
+	<tr>
+		<td colspan='2'>
+			<?php
+				echo elgg_view('input/longtext', [
+					'name' => 'params[ysu_settings_donar]',
+					'value' => $plugin->ysu_settings_donar,
+				]);
+			?>
+		</td>
+	</tr>
+
 
 
 <tr>
