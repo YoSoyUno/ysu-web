@@ -10,6 +10,12 @@ elgg_register_event_handler('init','system','ysu_theme_init');
 
 function ysu_theme_init() {
 
+  // Desactiva funciones de grupo que no usamos
+  remove_group_tool_option('membersmap');
+  remove_group_tool_option('tp_images');
+  remove_group_tool_option('activity');
+  remove_group_tool_option('related_groups');
+
 	elgg_register_event_handler('pagesetup', 'system', 'ysu_theme_pagesetup', 1000);
 
 	// theme specific CSS
