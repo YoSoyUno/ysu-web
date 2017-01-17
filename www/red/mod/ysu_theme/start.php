@@ -89,7 +89,7 @@ function ysu_theme_init() {
 
 	//cover
 	elgg_register_page_handler('cover', 'elgg_cover_page_handler');
-	elgg_register_js('cover_cropper', 'mod/ysu_theme/views/default/lib/cover/ui.cover_cropper.js');
+	elgg_register_js('cover_cropper', 'mod/ysu_theme/lib/cover/ui.cover_cropper.js');
 	elgg_register_action("cover/upload", "$action_base/cover/upload.php");
 	elgg_register_action("cover/crop", "$action_base/cover/crop.php");
 	elgg_register_action("cover/remove", "$action_base/cover/remove.php");
