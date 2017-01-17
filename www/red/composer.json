@@ -5,7 +5,8 @@
   "prefer-stable": true,
   "minimum-stability": "dev",
   "require": {
-    "elgg/elgg": "2.2.3"
+    "elgg/elgg": "2.2.3",
+    "hypejunction/elgg-cli": "~1.0"
   },
   "require-dev": {
     "srokap/code_review": "^1.0.5",
