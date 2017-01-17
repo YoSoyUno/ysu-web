@@ -22,8 +22,8 @@ $background_type = elgg_get_plugin_setting('background_type', 'ysu_theme');
 *************************************** */
 /***** DEFAULT LAYOUT ******/
 <?php // the width is on the page rather than topbar to handle small viewports ?>
-.elgg-page-default {  
-  min-width: 800px;   
+.elgg-page-default {
+  min-width: 800px;
 }
 .elgg-page-default .elgg-page-header > .elgg-inner {
 	max-width: 990px;
@@ -98,6 +98,7 @@ $background_type = elgg_get_plugin_setting('background_type', 'ysu_theme');
 
 .elgg-layout {
 	min-height: 360px;
+  display: flex;
 }
 .elgg-layout-widgets > .elgg-widgets {
 	float: right;

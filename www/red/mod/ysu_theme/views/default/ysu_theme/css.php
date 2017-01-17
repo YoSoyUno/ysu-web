@@ -110,6 +110,7 @@ $content_button_color = elgg_get_plugin_setting('content_button_color', 'ysu_the
 
 #body-activity .elgg-main {
 	width: 100%;
+	margin: 0;
 }
 
 
