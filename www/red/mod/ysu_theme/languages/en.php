@@ -37,14 +37,5 @@ return array(
   'cover:upload' => 'Upload an image',
   'cover:remove:success' => 'You have successfully deleted the cover',
   'profile:show' => 'Profile information',
-  'landing_page:text1' => 'A professional theme <br> for elgg',
-  'landing_page:text2' => 'You just need your idea, we handle the code',
-  'landing_page:try' => 'TRY IT NOW',
-  'landing_page:text3' => 'Responsive Theme',
-  'landing_page:text4' => 'The intention is to make a consistent theme in design to current standards,<br> try simplify the user experience, <br> keeping a clean design and content-oriented.',
-  'landing_page:text5' => 'Keep it simple',
-  'landing_page:text6' => 'Sign Up or Sign in',
-  'landing_page:contact_name' => 'Fernando Vega',
-  'landing_page:contact_data' => 'San Miguel de Allende <br> México. <br> vega.floyd@gmail.com',
 
 );
