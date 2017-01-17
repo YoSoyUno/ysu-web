@@ -9,6 +9,8 @@
 #body-globalmap .elgg-head,
 #group-tools-group-edit-tabbed,
 #body-profile .profile.elgg-col-1of3,
+#body-news .elgg-breadcrumbs,
+#body-news .elgg-sidebar,
 .elgg-menu-item-thewire,
 .elgg-menu-item-photos,
 .elgg-menu-item-photo-albums,
@@ -20,6 +22,11 @@
 body.body-admin .elgg-menu-page-configure, body.body-admin .elgg-widget-instance-control-panel, body.body-german .elgg-menu-page-configure, body.body-german .elgg-widget-instance-control-panel {
   display: block !important;
 }
+
+#body-news .elgg-layout-one-sidebar .elgg-main {
+  width: 100%;
+}
+
 /*Mapa completo*/
 #body-globalmap .elgg-page-default .elgg-page-body > .elgg-inner {
   max-width: 100%;
