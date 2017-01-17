@@ -52,14 +52,16 @@ class PluginsDeactivateCommand extends Command {
 			throw new RuntimeException('You must select at least one plugin');
 		}
 
-		$plugins = [];
+		$pluginspre = [];
 		foreach ($deactivate_ids as $plugin_id) {
-			$plugins[] = elgg_get_plugin_from_id($plugin_id);
+			$pluginspre[] = elgg_get_plugin_from_id($plugin_id);
 		}
 
+		$plugins = array_reverse($pluginspre);
+
 		do {
-			foreach ($plugins as $plugin) {
-				if ($plugin->isActive()) {
+			foreach ($plugins as $key => $plugin) {
+				if (!$plugin->isActive()) {
 					unset($plugins[$key]);
 					continue;
 				}
@@ -70,6 +72,7 @@ class PluginsDeactivateCommand extends Command {
 					register_error(elgg_echo($string, array($plugin->getFriendlyName(), $plugin->getError())));
 				} else {
 					system_message("Plugin {$plugin->getFriendlyName()} has been deactivated");
+					unset($plugins[$key]);
 				}
 			}
 		} while (count($plugins) > 0);
