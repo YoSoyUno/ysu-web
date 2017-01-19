@@ -1,0 +1,341 @@
+[{
+	"type": "group",
+	"subtype": null,
+	"metadata": {
+		"name": "PENINSULA ANTÁRTICA - Isla Rey Jorge",
+		"location": "-62.1935277778,-58.9600277778",
+		"orden": 0,
+		"briefdescription": "Inicio del Camino. Centro Coronario del Ser",
+		"Geolocalización en Grados": "62°11'36.7\"S 58°57'36.1\"W"
+	}
+}, {
+	"type": "group",
+	"subtype": null,
+	"metadata": {
+		"name": "LAGO KHAMI - Isla Árbol Bandera",
+		"location": "-54.5642222222,-68.4207222222",
+		"orden": 1,
+		"briefdescription": "Vértebra Co4, Coxis",
+		"Geolocalización en Grados": "54°33'51.2\"S 68°25'14.6\"W"
+	}
+}, {
+	"type": "group",
+	"subtype": null,
+	"metadata": {
+		"name": "LAGO ARGENTINO - Isla",
+		"location": "-50.2916666667,-72.7863611111",
+		"orden": 2,
+		"briefdescription": "Vértebra Co3, Coxis",
+		"Geolocalización en Grados": "50°17'30.0\"S 72°47'10.9\"W"
+	}
+}, {
+	"type": "group",
+	"subtype": null,
+	"metadata": {
+		"name": "LAGO GRAL CARRERA - Catedral de Marmol",
+		"location": "-46.6084722222,-72.5922777778",
+		"orden": 3,
+		"briefdescription": "Vértebra Co2, Coxis",
+		"Geolocalización en Grados": "46°36'30.5\"S 72°35'32.2\"W"
+	}
+}, {
+	"type": "group",
+	"subtype": null,
+	"metadata": {
+		"name": "LAGO NAHUEL HUAPI - Isla Victoria",
+		"location": "-40.8980833333,-71.5591666667",
+		"orden": 4,
+		"briefdescription": "Vértebra Co1, Coxis",
+		"Geolocalización en Grados": "40°53'53.1\"S 71°33'33.0\"W"
+	}
+}, {
+	"type": "group",
+	"subtype": null,
+	"metadata": {
+		"name": "LAGO TITIKAKA - Isla del Sol",
+		"location": "-16.0186944444,-69.1741388889",
+		"orden": 5,
+		"briefdescription": "Vértebra S5, Sacro",
+		"Geolocalización en Grados": "16°01'07.3\"S 69°10'26.9\"W"
+	}
+}, {
+	"type": "group",
+	"subtype": null,
+	"metadata": {
+		"name": "LAGO CUICOCHA",
+		"location": "0.3035,-78.3641388889",
+		"orden": 6,
+		"briefdescription": "Vértebra S4, Sacro",
+		"Geolocalización en Grados": "0°18'12.6\"N 78°21'50.9\"W"
+	}
+}, {
+	"type": "group",
+	"subtype": null,
+	"metadata": {
+		"name": "LAGO TOTA - Isla",
+		"location": "5.5464722222,-72.90725",
+		"orden": 7,
+		"briefdescription": "Vértebra S3, Sacro",
+		"Geolocalización en Grados": "5°32'47.3\"N 72°54'26.1\"W"
+	}
+}, {
+	"type": "group",
+	"subtype": null,
+	"metadata": {
+		"name": "LAGO MARACAIBO - Isla",
+		"location": "10.6169722222,-71.547",
+		"orden": 8,
+		"briefdescription": "Vértebra S2, Sacro",
+		"Geolocalización en Grados": "10°37'01.1\"N 71°32'49.2\"W"
+	}
+}, {
+	"type": "group",
+	"subtype": null,
+	"metadata": {
+		"name": "LAGO NICARAGUA - Isla Ometepe",
+		"location": "11.4793055556,-85.6316666667",
+		"orden": 9,
+		"briefdescription": "Vértebra S1, Sacro",
+		"Geolocalización en Grados": "11°28'45.5\"N 85°37'54.0\"W"
+	}
+}, {
+	"type": "group",
+	"subtype": null,
+	"metadata": {
+		"name": "LAGO CHAPALA - Isla",
+		"location": "20.2868333333,-103.0271111111",
+		"orden": 10,
+		"briefdescription": "Vértebra L5, Lumbar",
+		"Geolocalización en Grados": "20°17'12.6\"N 103°01'37.6\"W"
+	}
+}, {
+	"type": "group",
+	"subtype": null,
+	"metadata": {
+		"name": "LAGO LIEBRE - Isla",
+		"location": "27.5178888889,-113.8976666667",
+		"orden": 11,
+		"briefdescription": "Vértebra L4, Lumbar",
+		"Geolocalización en Grados": "27°31'04.4\"N 113°53'51.6\"W"
+	}
+}, {
+	"type": "group",
+	"subtype": null,
+	"metadata": {
+		"name": "LAGO SALADO - Isla Antilope",
+		"location": "40.9454166667,-112.2001111111",
+		"orden": 12,
+		"briefdescription": "Vértebra L3, Lumbar",
+		"Geolocalización en Grados": "40°56'43.5\"N 112°12'00.4\"W"
+	}
+}, {
+	"type": "group",
+	"subtype": null,
+	"metadata": {
+		"name": "LAGO KINBASKET - Isla",
+		"location": "51.7633611111,-117.6595833333",
+		"orden": 13,
+		"briefdescription": "Vértebra L2, Lumbar",
+		"Geolocalización en Grados": "51°45'48.1\"N 117°39'34.5\"W"
+	}
+}, {
+	"type": "group",
+	"subtype": null,
+	"metadata": {
+		"name": "LAGO KLUANE - Isla",
+		"location": "61.3245555556,-138.7707777778",
+		"orden": 14,
+		"briefdescription": "Vértebra L1, Lumbar",
+		"Geolocalización en Grados": "61°19'28.4\"N 138°46'14.8\"W"
+	}
+}, {
+	"type": "group",
+	"subtype": null,
+	"metadata": {
+		"name": "LAGO ILIAMNA - Isla",
+		"location": "59.7181388889,-154.4654166667",
+		"orden": 15,
+		"briefdescription": "Vértebra T12, Toráxica",
+		"Geolocalización en Grados": "59°43'05.3\"N 154°27'55.5\"W"
+	}
+}, {
+	"type": "group",
+	"subtype": null,
+	"metadata": {
+		"name": "LAGO ADAK - Isla",
+		"location": "51.8119722222,-176.6308055556",
+		"orden": 16,
+		"briefdescription": "Vértebra T11, Toráxica",
+		"Geolocalización en Grados": "51°48'43.1\"N 176°37'50.9\"W"
+	}
+}, {
+	"type": "group",
+	"subtype": null,
+	"metadata": {
+		"name": "LAGO KRONOTSKY - Isla",
+		"location": "54.8061944444,160.3108055556",
+		"orden": 17,
+		"briefdescription": "Vértebra T10, Toráxica",
+		"Geolocalización en Grados": "54°48'22.3\"N 160°18'38.9\"E"
+	}
+}, {
+	"type": "group",
+	"subtype": null,
+	"metadata": {
+		"name": "LAGO BIWA - Isla Chikubu",
+		"location": "35.4219444444,136.1431666667",
+		"orden": 18,
+		"briefdescription": "Vértebra T9, Toráxica",
+		"Geolocalización en Grados": "35°25'19.0\"N 136°08'35.4\"E"
+	}
+}, {
+	"type": "group",
+	"subtype": null,
+	"metadata": {
+		"name": "LAGO SUN MOON - Isla",
+		"location": "23.8556944444,120.91125",
+		"orden": 19,
+		"briefdescription": "Vértebra T8, Toráxica",
+		"Geolocalización en Grados": "23°51'20.5\"N 120°54'40.5\"E"
+	}
+}, {
+	"type": "group",
+	"subtype": null,
+	"metadata": {
+		"name": "LAGO TAAL - Isla Taal",
+		"location": "14.0092777778,120.9957222222",
+		"orden": 20,
+		"briefdescription": "Vértebra T7, Toráxica",
+		"Geolocalización en Grados": "14°00'33.4\"N 120°59'44.6\"E"
+	}
+}, {
+	"type": "group",
+	"subtype": null,
+	"metadata": {
+		"name": "LAGO TAGE - Isla",
+		"location": "-3.9119444444,136.2936111111",
+		"orden": 21,
+		"briefdescription": "Vértebra T6, Toráxica",
+		"Geolocalización en Grados": "3°54'43.0\"S 136°17'37.0\"E"
+	}
+}, {
+	"type": "group",
+	"subtype": null,
+	"metadata": {
+		"name": "LAGO ADAK - Rinjani",
+		"location": "-8.4072222222,116.4138055556",
+		"orden": 22,
+		"briefdescription": "Vértebra T5, Toráxica",
+		"Geolocalización en Grados": "8°24'26.0\"S 116°24'49.7\"E"
+	}
+}, {
+	"type": "group",
+	"subtype": null,
+	"metadata": {
+		"name": "LAGO TOBA - Isla Samosir",
+		"location": "2.6269444444,98.8498333333",
+		"orden": 23,
+		"briefdescription": "Vértebra T4, Toráxica",
+		"Geolocalización en Grados": "2°37'37.0\"N 98°50'59.4\"E"
+	}
+}, {
+	"type": "group",
+	"subtype": null,
+	"metadata": {
+		"name": "LAGO INDAWGYI - Isla",
+		"location": "25.1485277778,96.3163611111",
+		"orden": 24,
+		"briefdescription": "Vértebra T3, Toráxica",
+		"Geolocalización en Grados": "25°08'54.7\"N 96°18'58.9\"E"
+	}
+}, {
+	"type": "group",
+	"subtype": null,
+	"metadata": {
+		"name": "LAGO YAMDROK - Isla",
+		"location": "28.94775,90.9207777778",
+		"orden": 25,
+		"briefdescription": "Vértebra T2, Toráxica",
+		"Geolocalización en Grados": "28°56'51.9\"N 90°55'14.8\"E"
+	}
+}, {
+	"type": "group",
+	"subtype": null,
+	"metadata": {
+		"name": "LAGO LA'NCO - Isla",
+		"location": "30.6589722222,81.1794722222",
+		"orden": 26,
+		"briefdescription": "Vértebra T1, Toráxica",
+		"Geolocalización en Grados": "30°39'32.3\"N 81°10'46.1\"E"
+	}
+}, {
+	"type": "group",
+	"subtype": null,
+	"metadata": {
+		"name": "LAGO KARAKUL - Isla",
+		"location": "39.0719166667,73.4336666667",
+		"orden": 27,
+		"briefdescription": "Vértebra C7, Cervical",
+		"Geolocalización en Grados": "39°04'18.9\"N 73°26'01.2\"E"
+	}
+}, {
+	"type": "group",
+	"subtype": null,
+	"metadata": {
+		"name": "LAGO HANNA - Isla",
+		"location": "30.2551944444,67.1001666667",
+		"orden": 28,
+		"briefdescription": "Vértebra C6, Cervical",
+		"Geolocalización en Grados": "30°15'18.7\"N 67°06'00.6\"E"
+	}
+}, {
+	"type": "group",
+	"subtype": null,
+	"metadata": {
+		"name": "LAGO BAKHTEGAN - Isla",
+		"location": "29.5998055556,53.6941388889",
+		"orden": 29,
+		"briefdescription": "Vértebra C5, Cervical",
+		"Geolocalización en Grados": "29°35'59.3\"N 53°41'38.9\"E"
+	}
+}, {
+	"type": "group",
+	"subtype": null,
+	"metadata": {
+		"name": "LAGO VAN - Isla",
+		"location": "38.6080833333,43.0849166667",
+		"orden": 30,
+		"briefdescription": "Vértebra C4, Cervical",
+		"Geolocalización en Grados": "38°36'29.1\"N 43°05'05.7\"E"
+	}
+}, {
+	"type": "group",
+	"subtype": null,
+	"metadata": {
+		"name": "LAGO PRESPA - Isla Golemgrad",
+		"location": "40.86875,20.9894166667",
+		"orden": 31,
+		"briefdescription": "Vértebra C3, Cervical",
+		"Geolocalización en Grados": "40°52'07.5\"N 20°59'21.9\"E"
+	}
+}, {
+	"type": "group",
+	"subtype": null,
+	"metadata": {
+		"name": "LAGO MAGGIORE - Isla",
+		"location": "45.9113888889,8.5378055556",
+		"orden": 32,
+		"briefdescription": "Vértebra C2, Cervical, Axis",
+		"Geolocalización en Grados": "45°54'41.0\"N 8°32'16.1\"E"
+	}
+}, {
+	"type": "group",
+	"subtype": null,
+	"metadata": {
+		"name": "LAGO SEBKHA - Isla",
+		"location": "35.486,-0.9633333333",
+		"orden": 33,
+		"briefdescription": "Vértebra C1, Cervical, Atlas",
+		"Geolocalización en Grados": "35°29'09.6\"N 0°57'48.0\"W"
+	}
+}]

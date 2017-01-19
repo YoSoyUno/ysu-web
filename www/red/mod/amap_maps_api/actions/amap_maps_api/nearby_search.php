@@ -149,8 +149,6 @@ if ($entities) {
         $entity = amap_ma_set_entity_additional_info($entity, 'name', 'briefdescription', groupsmap_get_group_location_str($entity));
     }
 
-
-    error_log('##################### muestra array:');
     //error_log(echo json_encode($entities));
     //error_log( print_r($entities, TRUE) );
 
@@ -165,8 +163,22 @@ if ($entities) {
             $object_x['title'] = amap_ma_remove_shits($e->getVolatileData('m_title'));;
             $object_x['description'] = amap_ma_get_entity_description($e->getVolatileData('m_description'));
             $object_x['location'] = amap_ma_remove_shits($e->getVolatileData('m_location'));
-            $object_x['lat'] = $e->getLatitude();
-            $object_x['lng'] = $e->getLongitude();
+
+            // Si solo es numeros, suponemos que es una coordenada
+            if (preg_match('/[A-Za-z]/', $object_x['location']))
+            {
+              $object_x['lat'] = $e->getLatitude();
+              $object_x['lng'] = $e->getLongitude();
+              //error_log("### {$object_x['location']} --- Longitud: {$object_x['lng']} Latitud: {$object_x['lng']}");
+
+            } else {
+              // Consideramos que es una coordenada porque no tiene letras
+              $coord = explode(',',$object_x['location']);
+              $object_x['lat'] = $coord[0];
+              $object_x['lng'] = $coord[1];
+              //error_log("### {$object_x['location']} --- Longitud: {$object_x['lng']} Latitud: {$object_x['lng']}");
+            }
+
             $object_x['icon'] = $e->getVolatileData('m_icon');
             $object_x['type'] = $e->getType().$e->getSubtype();
             if ($e->getSubtype() === 'event') {
