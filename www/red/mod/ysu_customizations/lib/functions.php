@@ -26,3 +26,21 @@ function event_manager_event_type_options_ysu($admin) {
 
 	return $type_options;
 }
+
+
+function ysu_ultimo_punto() {
+	$entities = array(
+	    "type" => "group",
+	    "full_view" => FALSE,
+	    'limit' => get_input('limit', 0),
+	    'offset' => get_input('proximity_offset', 0),
+	    'count' => false
+	);
+
+	foreach ($entities as $group) {
+		$object_x['orden'] = $group->orden;
+		$object_x['estado'] = $group->estado;
+	}
+
+
+}
