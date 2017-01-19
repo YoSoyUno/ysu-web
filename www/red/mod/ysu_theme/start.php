@@ -87,7 +87,7 @@ function ysu_theme_init() {
 	//reset action
 	$action_base = elgg_get_plugins_path() . 'ysu_theme/actions';
 
-	elgg_register_action("ysu_theme/reset", "$action_base/reset.php");
+  elgg_register_action("ysu_theme/reset", "$action_base/reset.php");
 
   // accion de carga de contenidos usada por efecto ink
   elgg_register_action("ysu_theme/ink", "$action_base/ink.php", 'public');
@@ -621,6 +621,8 @@ function _my_elgg_river_menu_setup($hook, $type, $return, $params) {
 		$item = $params['item'];
 		/* @var \ElggRiverItem $item */
 		$object = $item->getObjectEntity();
+    $owner = $object->getOwnerEntity();
+
 		// add comment link but annotations cannot be commented on
 		if ($item->annotation_id == 0) {
 			if ($object->canComment()) {
@@ -648,10 +650,44 @@ function _my_elgg_river_menu_setup($hook, $type, $return, $params) {
 			);
 			$return[] = \ElggMenuItem::factory($options);
 		}
+
+
+    // Agrega boton par reportar mensajes usuarios desde el river
+    if ($object->getSubtype() == 'thewire' || $object->getSubtype() == 'comment') {
+
+      $href = elgg_http_add_url_query_elements('reportedcontent/add', [
+    		'address' => $object->getURL(),
+    		'title' => elgg_echo('reportedcontent:this:content:text') . $owner->getDisplayName(),
+    	]);
+
+    	$return[] = \ElggMenuItem::factory([
+    		'name' => 'reportuser',
+    		'title' => elgg_echo('reportedcontent:this:content:tooltip'),
+        'text' => elgg_view_icon('report-this'),
+    		'href' => $href,
+    		'section' => 'action',
+    		'link_class' => 'elgg-lightbox',
+    		'deps' => 'elgg/reportedcontent',
+    	]);
+
+
+      // $options = array(
+      //   'name' => 'report_this',
+      //   'href' => "/reportedcontent/add?address=/{$object->getSubtype()}/thread/{$object->getGUID()}",
+      //   'text' => '<i class="fa fa-flag fa-lg"></i>',
+      //   'title' => elgg_echo('reportedcontent:this:tooltip'),
+      //   'priority' => 300,
+      //   'item_class' => 'align-right',
+      // );
+      // $return[] = \ElggMenuItem::factory($options);
+    }
+
+
 	}
 
 	return $return;
 }
+
 
 /**
  * Entity menu is list of links and info on any entity

@@ -26,6 +26,10 @@ return array (
   'event_manager:menu:group_events' => 'Eventos del Punto',
   'event_manager_ysu:activacion_principal' => 'Activacion principal',
 
+  'reportedcontent:this:content:tooltip' => 'Reportar este mensaje',
+  'reportedcontent:this:content:text' => 'Mensaje de ',
+
+
 ////////////////// PUNTOS (groups)
 
   'groups' => "Puntos",
