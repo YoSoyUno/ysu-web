@@ -28,7 +28,8 @@ class JSONImporter {
 	public function import($file) {
 		$this->translations = array();
 
-		$objects = json_decode(file_get_contents($file), true);
+		$objects_temp = json_decode(file_get_contents($file), true);
+		$objects = array_reverse($objects_temp);
 		$objectslog = array();
 
 		foreach ($objects as $object) {
