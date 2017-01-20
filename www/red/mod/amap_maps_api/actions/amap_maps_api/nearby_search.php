@@ -203,6 +203,7 @@ if ($entities) {
                 // Define el orden del punto en el viaje
                 $object_x['orden'] = $e->orden;
                 $object_x['estado'] = $e->estado;
+                $object_x['tipo'] = $e->tipo;
 
                 $subtitulo = elgg_echo('ysu:nodo');
                 $object_x['info_window'] = $avatar.' <h3><a href="'.$object_x['url'].'">'.$object_x['title'].'</a></h3>';

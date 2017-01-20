@@ -264,17 +264,31 @@ define(function (require) {
                             var myLatlng = new google.maps.LatLng(value.lat,value.lng);
 
                             var mostrar = true;
-                            var tipo = value.type
+                            var clase = value.type;
 
-                            switch(tipo) {
+                            switch(clase) {
                               case 'user':
                                 var icono = value.map_icon;
                                 break;
                               case 'group':
-                                if (value.estado === 'Incompleto') {
-                                  var icono = icon_nodo;
+                                // console.log(value.estado);
+                                if (value.estado == 'Completo') {
+                                  if (value.tipo == 'paso') {
+                                    console.log(value.guid + ' es paso completo' );
+                                    var icono = icon_encuentro;
+                                  } else {
+                                    // poder completo
+                                    var icono = icon_nodo_completo;
+                                  }
                                 } else {
-                                  var icono = icon_nodo_completo;
+                                  // Incompleto
+                                  if (value.tipo == 'paso') {
+                                    var icono = icon_nodo;
+                                    console.log(value.guid + ' es paso incompleto' );
+                                  } else {
+                                    // poder Incompleto
+                                    var icono = icon_nodo;
+                                  }
                                 }
                                 break;
                               case 'objectevent':
@@ -300,12 +314,13 @@ define(function (require) {
                                 // icon: value.map_icon,
                                 icon: icono,
                                 guid: value.guid,
-                                type: tipo,
+                                type: clase,
                                 event_type: value.event_type,
                                 event_group: value.event_group,
 
                                 orden: value.orden,
                                 estado: value.estado,
+                                tipo: value.tipo,
 
                                 optimized: false,
                                 visible: mostrar,
@@ -411,14 +426,15 @@ define(function (require) {
                           }
                         }
                         markers_groups.sort(function(a,b) {return (a.orden > b.orden) ? 1 : ((b.orden > a.orden) ? -1 : 0);} );
+                        console.log(markers_groups);
 
                         for (var i = 0; i < markers_groups.length; i++) {
                           if (markers_groups[i].type === 'group') {
 
-                            if (markers_groups[i].estado === 'Incompleto') {
-                              var line_color = "#e9d9a6";
-                            } else {
+                            if (markers_groups[i].estado === 'Completo') {
                               var line_color = "#eac55d";
+                            } else {
+                              var line_color = "#e9d9a6";
                             }
 
                             j = i + 1;
