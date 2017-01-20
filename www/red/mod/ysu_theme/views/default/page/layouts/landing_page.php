@@ -143,7 +143,13 @@ if (elgg_is_logged_in()) {
                             <h6>Estadísticas</h6>
                             <ul class="address">
                                 <?php
-                                $stats = get_entity_statistics(); ?>
+                                $stats = get_entity_statistics();
+                                $distancias = ysu_calcula_distancia(ysu_punto_actual());
+                                $distancia_total = floor(($distancias[0] / 1000));
+                                $distancia_rec = floor(($distancias[1] / 1000));
+                                ?>
+                                <li><?php echo $distancia_total ?> km. a recorrer</li>
+                                <li><?php echo $distancia_rec ?> km. ya recorridos</li>
                                 <li><?php echo $stats['group']['__base__'] ?> Puntos</li>
                                 <li><?php echo $stats['object']['event'] ?> Activaciones</li>
                                 <li><?php echo get_number_users() ?> Seres</li>

@@ -209,6 +209,7 @@ if ($entities) {
                 //$object_x['info_window'] .= ($object_x['location']?''.$object_x['location']:'');
                 //$object_x['info_window'] .= ($object_x['other_info']?'<br/>'.$object_x['other_info']:'');
                 $object_x['info_window'] .= ($object_x['description']?''.$object_x['description']:'');
+
                 break;
               case 'user':
                 $object_x['info_window'] = $avatar.' <h3><a href="'.$object_x['url'].'">'.$object_x['title'].'</a></h3>';
