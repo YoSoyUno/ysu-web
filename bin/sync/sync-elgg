@@ -2,10 +2,6 @@
 
 source ../database_auth.sh
 
-BD='ysu_red'
-BDIMPORT='ysu_red'
-SITIO='ysu.redesdepares.org'
-
 echo "ETAPA 1: Vamos a sincronizar la BD y archivos de $SITIO remoto en el servidor local de pruebas..."
 sleep 2s
 
