@@ -4,9 +4,12 @@ members
 thewire
 ckeditor
 reportedcontent
+notifications
 
 profile_manager
 group_tools
+notification_subjects
+notification_tools
 amapnews
 amap_maps_api
 groupsmap
