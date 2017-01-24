@@ -1,0 +1,26 @@
+== Version History ==
+
+x.x:
+
+2.0.0 (10/12/2015):
+ - Elgg 1.9+ upgrade
+ - subject language matches that of recipient
+
+1.5 (06/09/2015):
+ - html entity decode group and content title/names
+
+1.4 (04/04/2014):
+    - custom per-content-type subjects
+    - templating system to customize subjects
+    - magic language strings for localization
+Version 1.4 changes were funded by Connecting Conservation
+
+
+1.3 ()
+    - add in missing options on settings page
+
+1.2 (06/192013):
+	- better groups support in subjects
+
+1.1 (08/24/2012):
+	- optimized repetitive hook with identical params (courtesy of Steve Clay)
