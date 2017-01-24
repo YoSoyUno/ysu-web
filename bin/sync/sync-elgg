@@ -7,11 +7,11 @@ sleep 2s
 
 echo ""
 echo "Volcamos la BD en el servidor"
-ssh $SITIO "rm ~/dump/* && ~/dumpdb.sh $BD"
+ssh $SITIOUSER@$SITIO "rm ~/dump/* && ~/dumpdb.sh $BD"
 
 echo ""
 echo "Copiamos la BD desde el servidor hasta aqui"
-scp $SITIO:~/dump/$BD.sql.bz2 $HOME/tmp
+scp $SITIOUSER@$SITIO:~/dump/$BD.sql.bz2 $HOME/tmp
 
 
 echo ""
@@ -36,4 +36,4 @@ rm $HOME/tmp/*
 echo ""
 echo "ETAPA 2: Vamos a sincronizar algunos directorios con archivos..."
 sleep 2s
-rsync -P -r -a -v -e "ssh -l reevo" --delete $SITIO:/srv/ysu-web/files/red/ /srv/ysu-web/files/red/
+rsync -P -r -a -v -e "ssh -l $SITIOUSER" --delete $SITIO:/srv/ysu-web/files/red/ /srv/ysu-web/files/red/
