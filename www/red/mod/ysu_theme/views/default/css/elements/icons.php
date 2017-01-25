@@ -40,7 +40,7 @@
 	float: left;
 	border-radius: 50%;
   box-shadow: rgba(240, 239, 237, 0.77) 0px 0px 10px;
-
+	margin: -2px;
 }
 .elgg-avatar-tiny > a > img {
 	width: 25px;
