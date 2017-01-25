@@ -68,7 +68,7 @@ return array (
   'groups:content_access_mode:unrestricted' => "Sin restringir &mdash; el acceso depende de la configuración individual de cada contenido.",
   'groups:content_access_mode:membersonly' => "Solo Seres - Los que no son Seres nunca podrán accesar al contenido del Punto",
   'groups:access' => "Permisos de acceso",
-  'groups:owner' => "Propietario",
+  'groups:owner' => "Responsable",
   'groups:owner:warning' => "Advertencia: si cambia este valor, usted ya no será el dueño de este Punto.",
   'groups:widget:num_display' => 'N&uacute;mero de Seres a mostrar',
   'groups:widget:membership' => 'Seres en el Punto',
