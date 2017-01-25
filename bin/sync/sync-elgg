@@ -37,3 +37,15 @@ echo ""
 echo "ETAPA 2: Vamos a sincronizar algunos directorios con archivos..."
 sleep 2s
 rsync -P -r -a -v -e "ssh -l $SITIOUSER" --delete $SITIO:/srv/ysu-web/files/red/ /srv/ysu-web/files/red/
+
+echo ""
+echo "ETAPA 3: Hacemos algunos cambios en funcion de la version y limpiamos el cache"
+
+if [ $VERSION == "ALFA" ] || [ $VERSION == "BETA" ]
+then
+  ../../www/red/vendor/bin/elgg-cli plugins:activate "developers"
+  ../../www/red/vendor/bin/elgg-cli config:setting systemcache 0
+  ../../www/red/vendor/bin/elgg-cli config:setting simplecache 0
+fi
+
+../../www/red/vendor/bin/elgg-cli site:flush_cache
