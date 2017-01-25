@@ -529,6 +529,7 @@ h1, h2, h3, h4, h5, h6 {
 .profile h2, .nickname{
 	text-shadow: 1px 1px 2px #000;
 	color: #fff;
+	text-transform: uppercase;
 }
 
 .profile .nickname {
