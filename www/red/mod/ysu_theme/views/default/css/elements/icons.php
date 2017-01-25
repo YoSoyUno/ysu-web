@@ -33,14 +33,14 @@
 .elgg-avatar {
 	position: relative;
 	display: inline-block;
-	border-radius: 50%;
-	box-shadow: #696969 0px 0px 5px;
 }
 .elgg-avatar > a > img {
 	display: block;
-	border-radius: 50%;
 	width: 24px;
 	float: left;
+	border-radius: 50%;
+  box-shadow: rgba(240, 239, 237, 0.77) 0px 0px 10px;
+
 }
 .elgg-avatar-tiny > a > img {
 	width: 25px;
