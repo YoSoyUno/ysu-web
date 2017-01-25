@@ -7,6 +7,7 @@ use Elgg\CLI\AddUserCommand;
 use Elgg\CLI\ConfigDatarootCommand;
 use Elgg\CLI\ConfigPathCommand;
 use Elgg\CLI\InstallCommand;
+use Elgg\CLI\PluginConfigCommand;
 use Elgg\CLI\PluginsActivateCommand;
 use Elgg\CLI\PluginsDeactivateCommand;
 use Elgg\CLI\RouteCommand;
@@ -48,6 +49,7 @@ class CLI {
 			ConfigDatarootCommand::class,
 			ConfigPathCommand::class,
 			AddUserCommand::class,
+			PluginConfigCommand::class,
 			PluginsActivateCommand::class,
 			PluginsDeactivateCommand::class,
 			RouteCommand::class,
