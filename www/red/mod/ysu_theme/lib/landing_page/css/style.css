@@ -694,13 +694,15 @@ button:active {
 }
 @media (max-width: 991px) {
   body .navbar-collapse {
-    width: 230px;
+    /*width: 230px;
     position: fixed;
     top: 0;
     right: 0;
     bottom: 0;
     height: 100% !important;
-    z-index: 1;
+    z-index: 1;*/
+    display: none !important;
+
   }
 }
 @media (min-width: 992px) {
@@ -1518,13 +1520,13 @@ section * {
   font-weight: normal;
   color: #ffffff;
   font-weight: 600;
-  line-height: 56px;
+  line-height: 33px;
   text-shadow: black 0px 0px 22px;
 }
 
 @media (max-width: 480px) {
   .content-23 .hero-unit h1 {
-    font-size: 36px;
+    font-size: 60px;
     font-weight: normal;
     color: #ffffff;
     font-weight: 600;

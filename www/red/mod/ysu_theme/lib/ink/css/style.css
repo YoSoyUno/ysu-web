@@ -23,6 +23,15 @@ Main Content
   text-align: center;
 }
 
+
+/*Custom modal*/
+
+.modal-content-login {
+  max-height: 100vh;
+  overflow-y: auto;
+}
+
+
 /* --------------------------------
 
 Modal window
@@ -82,7 +91,7 @@ Modal window
 .cd-modal .modal-close {
   /* 'X' icon */
   position: absolute;
-  z-index: 1;
+  z-index: 1000;
   top: 60px;
   right: 5%;
   height: 45px;

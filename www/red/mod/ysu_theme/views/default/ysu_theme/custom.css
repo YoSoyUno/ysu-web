@@ -77,6 +77,23 @@ body.body-admin .elgg-menu-page-configure, body.body-admin .elgg-widget-instance
   background: white;
 }
 
+#profile_manager_register_left, #profile_manager_register_right {
+  width: auto !important;
+}
+
+.elgg-form-register {
+  max-width: 475px;
+  margin: 0 auto;
+}
+
+input#register-name {
+  width: 100% !important;
+}
+
+.elgg-form-login label {
+  display: block;
+}
+
 /*RIVER */
 
 #body-activity .elgg-item-object-amapnews {
@@ -939,4 +956,12 @@ body.body-admin .elgg-menu-page-configure, body.body-admin .elgg-widget-instance
   .col-lg-offset-0 {
     margin-left: 0;
   }
+}
+
+@media (max-width: 330px) {
+	.logo {
+    width: 64px;
+    position: absolute;
+    left: 40px;
+	}
 }
