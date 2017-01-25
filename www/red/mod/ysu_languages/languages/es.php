@@ -6,7 +6,7 @@ return array (
   'ysu:login:title1' => 'Conectate a la red ...',
   'ysu:login:title2' => 'o Registrate como un Ser',
   'ysu:login:close' => 'Cerrar',
-  'ysu:frontpage:subtitle' => 'Activando la red planetaria',
+  'ysu:frontpage:subtitle' => 'Activando la RED PLANETARIA',
 
   'activity' => 'La Red',
 
