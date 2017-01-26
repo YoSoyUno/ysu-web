@@ -44,8 +44,8 @@ echo "ETAPA 3: Hacemos algunos cambios en funcion de la version y limpiamos el c
 if [ $VERSION == "ALFA" ] || [ $VERSION == "BETA" ]
 then
   ../../www/red/vendor/bin/elgg-cli plugins:activate "developers"
-  ../../www/red/vendor/bin/elgg-cli config:setting systemcache 0
-  ../../www/red/vendor/bin/elgg-cli config:setting simplecache 0
+  ../../www/red/vendor/bin/elgg-cli config:setting system_cache_enabled 0
+  ../../www/red/vendor/bin/elgg-cli config:setting simplecache_enabled 0
 fi
 
 ../../www/red/vendor/bin/elgg-cli site:flush_cache
