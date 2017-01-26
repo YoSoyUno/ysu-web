@@ -90,7 +90,6 @@ class ConfigSettingCommand extends Command {
 				system_message("Actual value for system config $name is $actual");
 			}
 		}
-
 	}
 
 }

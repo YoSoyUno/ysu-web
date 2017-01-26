@@ -189,7 +189,7 @@ function _elgg_rmdir($dir, $empty = false) {
 		return true;
 	}
 	$files = array_diff(scandir($dir), array('.', '..'));
-	
+
 	foreach ($files as $file) {
 		if (is_dir("$dir/$file")) {
 			_elgg_rmdir("$dir/$file");
@@ -201,7 +201,7 @@ function _elgg_rmdir($dir, $empty = false) {
 	if ($empty) {
 		return true;
 	}
-	
+
 	return rmdir($dir);
 }
 
@@ -228,12 +228,12 @@ function elgg_flush_caches() {
 
 /**
  * Checks if /cache directory has been symlinked to views simplecache directory
- * 
+ *
  * @return bool
  * @access private
  */
 function _elgg_is_cache_symlinked() {
-	$link = elgg_get_root_path() . 'cache/';
+	$link = elgg_get_root_path() . 'cache';
 	$target = elgg_get_cache_path() . 'views_simplecache/';
 	return is_dir($link) && realpath($target) == realpath(readlink($link));
 }
@@ -251,7 +251,7 @@ function _elgg_cache_init() {
 
 return function(\Elgg\EventsService $events, \Elgg\HooksRegistrationService $hooks) {
 	$events->registerHandler('ready', 'system', '_elgg_cache_init');
-	
+
 	// register plugin hooks for cache reset
 	$events->registerHandler('cache:flush', 'system', 'elgg_reset_system_cache');
 	$events->registerHandler('cache:flush', 'system', 'elgg_invalidate_simplecache');
