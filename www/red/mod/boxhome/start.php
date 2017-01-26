@@ -1,7 +1,7 @@
 <?php
 /**
  * Elgg boxhome plus plugin
- * 
+ *
  */
 
 elgg_register_event_handler('init', 'system', 'boxhome_init');
@@ -16,10 +16,10 @@ function boxhome_init() {
 
   $ctx = elgg_get_context();
 
-  if ($ctx == 'activity'){
+  if ($ctx == 'activity' OR $ctx == 'actividad'){
     elgg_extend_view('page/layouts/elements/header', 'boxhome/init');
-  } 
-  
+  }
+
   //elgg_extend_view('js/elgg', 'boxhome/js/init.boxhome.js');
 }
 
@@ -33,7 +33,7 @@ function boxhome_page_handler($page) {
 
 	$page_type = $page[0];
 	switch ($page_type) {
-		case 'activity':			
+		case 'activity':
 			include "$boxhome_dir/activity.php";
 			break;
 		default:
