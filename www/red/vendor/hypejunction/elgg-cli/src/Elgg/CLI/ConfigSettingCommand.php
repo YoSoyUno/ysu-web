@@ -4,6 +4,8 @@ namespace Elgg\CLI;
 
 use RuntimeException;
 use Symfony\Component\Console\Input\InputArgument;
+use Symfony\Component\Console\Input\InputOption;
+
 
 /**
  * site:url CLI command
@@ -18,7 +20,7 @@ class ConfigSettingCommand extends Command {
 				->setDescription('Changes a system config or plugin setting value')
 				->addArgument('name', InputArgument::REQUIRED, 'Setting name')
 				->addArgument('value', InputArgument::OPTIONAL, 'Setting new value, you can use \'unset\' to unset the setting')
-				->addArgument('plugin', InputArgument::OPTIONAL, 'Plugin ID');
+				->addOption('plugin', null, InputOption::VALUE_OPTIONAL, 'Plugin ID');
 	}
 
 	/**
@@ -28,15 +30,13 @@ class ConfigSettingCommand extends Command {
 
 		$name = $this->argument('name');
 		$value = $this->argument('value');
-		$plugin = $this->argument('plugin');
+		$plugin = $this->option('plugin');
 
 		if ($plugin) {
 			if (!elgg_plugin_exists($plugin)) {
 				system_message("Abort! The plugin $plugin doesn't exist");
 				return;
 			}
-
-			elgg_set_config('systemcache',0);
 
 			if (isset($value)) {
 				if ($value == 'unset') {
@@ -57,16 +57,36 @@ class ConfigSettingCommand extends Command {
 			// System config
 			if (isset($value)) {
 				if ($value == 'unset') {
-					elgg_unset_config($name,0);
+					unset_config($name,0);
 					system_message("System config $name is now unset");
 				} else {
-					if (elgg_save_config($name,$value)) {
-						system_message("New value for system config $name is $value");
+					switch ($name) {
+						case 'system_cache_enabled':
+							if ($value == '0') {
+								elgg_disable_system_cache();
+							} else {
+								elgg_enable_system_cache();
+							}
+							system_message("New value for system config $name is $value");
+							break;
+						case 'simplecache_enabled':
+							if ($value == '0') {
+								elgg_disable_simplecache();
+							} else {
+								elgg_enable_simplecache();
+							}
+							system_message("New value for system config $name is $value");
+							break;
+						default:
+							if (elgg_save_config($name,$value,0)) {
+								system_message("New value for system config $name is $value");
+							}
+							break;
 					}
 
 				}
 			} else {
-				$actual = elgg_get_config($name,0);
+				$actual = elgg_get_config($name);
 				system_message("Actual value for system config $name is $actual");
 			}
 		}
