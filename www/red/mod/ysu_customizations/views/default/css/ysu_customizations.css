@@ -1,7 +1,84 @@
 /*Oculta campos extras del profile del grupo */
 
-.groups-profile-fields .estado, .groups-profile-fields .orden {
+#body-group_profile .elgg-heading-main,.groups-profile-fields .estado, .groups-profile-fields .orden, .groups-profile-fields .tipo {
   display: none;
+}
+
+.group-banner {
+  min-height: 300px;
+  width: 100%;
+  background-size: cover;
+  display: block;
+  float: left;
+  background-position: center;
+  position: relative;
+}
+
+.group-banner h2 {
+  position: absolute;
+  left: 10px;
+  top: 200px;
+  color: white;
+  font-size: 24pt;
+  text-shadow: black 0px 0px 5px;
+}
+
+.group-banner h3 {
+  position: absolute;
+  left: 10px;
+  top: 180px;
+  color: white;
+  text-shadow: black 0px 0px 5px;
+  
+}
+
+.group-banner span {
+  position: absolute;
+  left: 0;
+  top: 240px;
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 4px 10px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+
+.group-banner .group-banner-minimap {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  border: 1px #ccc solid;
+  box-shadow: black 0px 0px 11px;
+  width: 100px;
+  height: 100px;
+  background-size: cover;
+}
+
+.group-banner-description {
+  float: left;
+  position: relative;
+}
+
+.group-banner-description h3 {
+  line-height: 30px;
+  font-weight: 600;
+}
+
+.group-banner-owner {
+  float: right;
+  display: block;
+  line-height: 30px;
+}
+
+@media (max-width: 600px) {
+  .group-banner h3 {
+    top: 116px;
+  }
+  .group-banner h2 {
+      top: 140px;
+  }
+
 }
 
 /*Imagen destacada de grupo*/

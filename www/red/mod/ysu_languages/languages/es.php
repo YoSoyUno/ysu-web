@@ -6,7 +6,11 @@ return array (
   'ysu:login:title1' => 'Conectate a la red ...',
   'ysu:login:title2' => 'o Registrate como un Ser',
   'ysu:login:close' => 'Cerrar',
-  'ysu:frontpage:subtitle' => 'Activando la RED PLANETARIA',
+  'ysu:frontpage:subtitle' => 'Activando la Red Planetaria',
+  'ysu:punto:poder' => 'Punto de Poder',
+  'ysu:punto:paso' => 'Punto de paso',
+  'ysu:punto:coord' => 'Coordenadas del punto',
+  'ysu:punto:detalles' => 'Detalles sobre este punto',
 
   'activity' => 'La Red',
 

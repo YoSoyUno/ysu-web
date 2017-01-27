@@ -94,6 +94,10 @@ input#register-name {
   display: block;
 }
 
+.elgg-menu-title {
+  margin: 0;
+}
+
 /*RIVER */
 
 #body-activity .elgg-item-object-amapnews {
