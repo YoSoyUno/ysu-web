@@ -25,7 +25,11 @@ if (!$owner) {
 
 <?php
 
-$tipo = elgg_echo('ysu:punto:'.$group->tipo);
+if ($group->tipo == '') {
+	$tipo = elgg_echo('ysu:punto:poder');
+} else {
+	$tipo = elgg_echo('ysu:punto:'.$group->tipo);
+}
 $title = $group->name;
 $description = $group->description;
 $briefdescription = $group->briefdescription;
