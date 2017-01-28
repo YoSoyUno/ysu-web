@@ -145,7 +145,7 @@ $slidebar_a_color = elgg_get_plugin_setting('slidebar_a_color', 'ysu_theme');
 }
 
 .elgg-menu-topbar > li > a {
-	padding-top: 5px;
+    padding: 3px 9px 2px;
 	color: <?php echo $topbar_a_color; ?>;
 	margin: 0 6px;
 	font-weight: bold
