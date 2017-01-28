@@ -178,6 +178,18 @@ function ysu_theme_pagesetup() {
 		'link_class' => '',
 	));
 
+  // Boton de donar
+  elgg_register_menu_item('topbar', array(
+    'name' => 'donate',
+    'text' => '<i class="fa fa-heart fa-lg"></i> ',
+    'href' => "#",
+    'priority' => 90,
+    'title' => 'Dona ahora',
+    'data-target' => 'ysu_settings_donar',
+    'class' => 'cd-modal-trigger',
+    'section' => 'alt'
+  ));
+
 	elgg_unregister_menu_item('footer','powered');
 
 	if (elgg_is_logged_in()) {
@@ -262,17 +274,7 @@ function ysu_theme_pagesetup() {
 			'item_class' => 'elgg-avatar elgg-avatar-topbar',
 		));
 
-    // Boton de donar
-		elgg_register_menu_item('topbar', array(
-			'name' => 'donate',
-			'text' => '<i class="fa fa-heart fa-lg"></i> ',
-			'href' => "#",
-			'priority' => 90,
-      'title' => 'Dona ahora',
-      'data-target' => 'ysu_settings_donar',
-      'class' => 'cd-modal-trigger',
-			'section' => 'alt'
-		));
+
 
 		elgg_register_menu_item('topbar', array(
 			'name' => 'account',
