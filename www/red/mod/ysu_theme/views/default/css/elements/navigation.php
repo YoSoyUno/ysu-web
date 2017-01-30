@@ -634,7 +634,7 @@ html.sb-static .sb-slidebar,
 
 @media (max-width: 480px) { /* Slidebar widths on extra small screens. */
 	.sb-slidebar {
-		width: 70%;
+		width: 50%;
 	}
 
 	.sb-width-thin {
@@ -648,7 +648,7 @@ html.sb-static .sb-slidebar,
 
 @media (min-width: 481px) { /* Slidebar widths on small screens. */
 	.sb-slidebar {
-		width: 55%;
+		width: 30%;
 	}
 
 	.sb-width-thin {
