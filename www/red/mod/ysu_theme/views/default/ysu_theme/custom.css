@@ -231,6 +231,7 @@ input#register-name {
   min-height: 1px;
   padding-right: 15px;
   padding-left: 15px;
+  box-sizing: border-box;
 }
 
 .col-xs-1,

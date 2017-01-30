@@ -15,6 +15,36 @@ label.error{
   font-size: 80%;
 }
 
+
+.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+  /*max-width: 1500px;*/
+
+}
+
+#intro-bajada {
+  display: block;
+  padding: 20px;
+  background: black;
+  font-size: 16pt;
+  color: #D0C39A;
+}
+#intro-bajada span {
+  max-width: 800px;
+  margin: 0 auto;
+
+}
+
 .elgg-menu-footer-default {
     float: left;
     font-size: 105%;
@@ -869,8 +899,10 @@ section * {
   }
 }
 .container {
+  max-width: 1300px;
   position: relative;
   z-index: 2;
+  margin: 0 auto;
 }
 @media (max-width: 767px) {
   header {
@@ -1266,17 +1298,18 @@ section * {
  * Content 8 stylesheet
  * */
 .content-8 {
-  padding-top: 130px;
-  padding-bottom: 130px;
+  padding-top: 0px;
+  margin-bottom: 10px;
   position: relative;
   text-align: center;
+  background: black;
 }
 .content-8 h3 {
   text-align: center;
   font-size: 30px;
   font-weight: normal;
   color: #34495e;
-  margin: 70px 0 35px;
+  margin: 40px 0 35px;
 }
 .content-8 p {
   font-size: 18px;
@@ -1290,7 +1323,7 @@ section * {
   box-sizing: border-box;
   background: none;
   border: 2px solid #e74c3c;
-  font-size: 14px;
+  font-size: 20px;
   font-weight: normal;
   color: #7f8c8d;
   font-weight: 500;
@@ -1315,7 +1348,7 @@ section * {
 }
 .content-8.v-center > div,
 .content-8 .v-center > div {
-  display: table-cell;
+  /*display: table-cell;*/
   vertical-align: middle;
   margin-top: 0;
   margin-bottom: 0;
@@ -1335,8 +1368,7 @@ section * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    padding-left: 20px;
-    padding-right: 20px;
+
   }
   .content-8.v-center.row,
   .content-8 .v-center.row {
@@ -1689,14 +1721,12 @@ section * {
 .header-10 .btn:focus {
   background-color: #2ecc71;
 }
-.content-7,
-.content-8 {
+.content-7 {
   padding-top: 100px;
   padding-bottom: 100px;
 }
 @media (max-width: 767px) {
-  .content-7,
-  .content-8 {
+  .content-7{
     padding-top: 100px;
     padding-bottom: 100px;
   }

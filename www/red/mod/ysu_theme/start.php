@@ -44,13 +44,13 @@ function ysu_theme_init() {
 	$slidebars = elgg_get_simplecache_url('lib/slidebars/slidebars.js');
   elgg_register_js('slidebars', $slidebars, 'footer');
 
-	elgg_register_js('js_validate', elgg_get_simplecache_url('lib/jquery-validate/jquery.validate.min.js'), 'footer');
-	elgg_register_js('bootstrap', elgg_get_simplecache_url('lib/landing_page/bootstrap/js/bootstrap.min.js'), 'footer');
-	elgg_register_js('modernizr', elgg_get_simplecache_url('lib/landing_page/js/modernizr.custom.js'), 'footer');
-	elgg_register_js('scrollTo', elgg_get_simplecache_url('lib/landing_page/js/jquery.scrollTo-1.4.3.1-min.js'), 'footer');
-	elgg_register_js('parallax', elgg_get_simplecache_url('lib/landing_page/js/jquery.parallax.min.js'), 'footer');
-	elgg_register_js('landing_page_startup', elgg_get_simplecache_url('lib/landing_page/js/startup-kit.js'), 'footer');
-	elgg_register_js('landing_page_script', elgg_get_simplecache_url('lib/landing_page/js/script.js'), 'footer');
+	elgg_register_js('js_validate', '/mod/ysu_theme/lib/jquery-validate/jquery.validate.min.js', 'footer');
+	elgg_register_js('bootstrap', '/mod/ysu_theme/lib/landing_page/bootstrap/js/bootstrap.min.js', 'footer');
+	elgg_register_js('modernizr', '/mod/ysu_theme/lib/landing_page/js/modernizr.custom.js', 'footer');
+	elgg_register_js('scrollTo', '/mod/ysu_theme/lib/landing_page/js/jquery.scrollTo-1.4.3.1-min.js', 'footer');
+	elgg_register_js('parallax', '/mod/ysu_theme/lib/landing_page/js/jquery.parallax.min.js', 'footer');
+	elgg_register_js('landing_page_startup', '/mod/ysu_theme/lib/landing_page/js/startup-kit.js', 'footer');
+	elgg_register_js('landing_page_script', '/mod/ysu_theme/lib/landing_page/js/script.js', 'footer');
 
   // #### Efecto ink
 

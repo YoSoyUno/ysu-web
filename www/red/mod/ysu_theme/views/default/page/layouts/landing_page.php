@@ -8,14 +8,14 @@ if (elgg_is_logged_in()) {
 }
 
 
-//elgg_load_js('jquery');
+elgg_load_js('jquery');
 // elgg_load_js('js_validate');
 // elgg_load_js('bootstrap');
-//elgg_load_js('modernizr');
-// elgg_load_js('scrollTo');
+// elgg_load_js('modernizr');
+elgg_load_js('scrollTo');
 // elgg_load_js('parallax');
 // elgg_load_js('landing_page_startup');
-// elgg_load_js('landing_page_script');
+elgg_load_js('landing_page_script');
 
 //elgg_load_css('ink-reset');
 
@@ -42,59 +42,54 @@ if (elgg_is_logged_in()) {
                     <div class="container">
                         <div class="hero-unit">
                             <h1><?php echo "YOSOY" ?></h1>
-                            <h3><?php echo elgg_echo('ysu:frontpage:subtitle'); ?></h3>
+                            <h3><?php echo elgg_echo('ysu:landing:subtitle'); ?></h3>
         		                <!-- <a href="#0" class="cd-btn cd-modal-trigger" data-target='modal-login'>Iniciar sesión</a>
                             <a href="#0" class="cd-btn cd-modal-trigger" data-target='ysu_settings_ayuda'>TEST</a> -->
 
                         </div>
                     </div>
+                   <a class="control-btn go-intro" href="#" title="<?php echo elgg_echo('ysu:landing:botonintro'); ?>"><i class="fa fa-lg fa-angle-double-down"></i></a>
                 </div>
-                <!-- <div class="content-11">
-                    <div class="container">
-                        <span><?php echo elgg_echo('landing_page:text2') ?></span>
-                        <a class="btn btn-large btn-danger go-login" href="#"><?php echo elgg_echo('landing_page:try') ?></a>
-                    </div>
-                </div> -->
+
             </section>
 
-             <!-- content-11  -->
+             <!-- content-8  -->
+             <section class="content-8 v-center intro">
 
+                   <div id="intro-bajada" class="container">
+                       <span><?php echo elgg_echo('ysu:landing:text0') ?></span>
+                   </div>
 
-            <!-- content-8  -->
-            <!-- <section class="content-8 v-center">
-                <div>
-                    <div class="container">
-                        <img src="/mod/ysu_theme/graphics/landing_page/responsive.png" width="512" height="355" alt="">
-
-                        <h3><?php echo elgg_echo('landing_page:text3') ?></h3>
-
-                        <div class="row">
-                            <div class="col-sm-6 col-sm-offset-3">
-                                <p><?php echo elgg_echo('landing_page:text4') ?>
-                                </p>
-                                <a class="btn btn-large btn-clear go-login" href="#"><?php echo elgg_echo('landing_page:try') ?></a>
-                            </div>
+                 <div>
+                     <div class="container">
+                        <div class="videoWrapper">
+                          <iframe id="intro-video" width="560" height="315" src="https://www.youtube.com/embed/7IT9g1YDcuc?autoplay=0&showinfo=0&controls=0&rel=0&enablejsapi=1" frameborder="0" allowfullscreen fs="1"></iframe>
                         </div>
-                    </div>
+                     </div>
+                 </div>
+             </section>
+             <section style='background: white;margin-bottom:100px;' class="content-8 v-center">
+               <div class="container">
+
+                 <div id="intro-text" class="row">
+                     <div class="col-sm-6 ">
+                       <?php echo elgg_echo('ysu:landing:text1') ?>
+                     </div>
+                     <div class="col-sm-6 hero-unit">
+                       <?php echo elgg_echo('ysu:landing:text2') ?>
+                     </div>
+                 </div>
+                <div class="row">
+                  <div class="col-sm-12">
+                    <a class="btn btn-large btn-clear cd-modal-trigger" data-target="modal-login" href="#"><?php echo elgg_echo('ysu:landing:sumate') ?></a>
+                  </div>
                 </div>
-            </section> -->
+              </div>
+
+             </section>
 
 
-             <!-- content-23  -->
-            <!-- <section class="content-23 v-center bg-midnight-blue custom-bg">
-                <div>
-                    <div class="container">
-                        <div class="hero-unit hero-unit-bordered">
-                            <h1><?php echo elgg_echo('landing_page:text5') ?></h1>
-                        </div>
-                    </div>
-                </div>
-                <a class="control-btn" href="#"><i class="fa fa-lg fa-angle-double-down"></i></a>
-            </section> -->
-
-            <!-- content-7  -->
-<!--
-            <section class="header-10-sub v-center bg-midnight-blue">
+            <!-- <section class="header-10-sub v-center bg-midnight-blue">
                 <div class="background">
                     &nbsp;
                 </div>
@@ -111,10 +106,7 @@ if (elgg_is_logged_in()) {
                     </div>
                 </div>
                 <a class="control-btn fui-arrow-down" href="#"> </a>
-            </section>
-            -->
-
-
+            </section> -->
 
 
             <!-- footer-3 -->
@@ -149,9 +141,11 @@ if (elgg_is_logged_in()) {
                                 $distancia_rec = floor(($distancias[1] / 1000));
                                 ?>
                                 <li><?php echo $distancia_total ?> km. a recorrer</li>
+                                <?php if ($distancia_rec != 0) { ?>
                                 <li><?php echo $distancia_rec ?> km. ya recorridos</li>
+                                <?php } ?>
                                 <li><?php echo $stats['group']['__base__'] ?> Puntos</li>
-                                <li><?php echo $stats['object']['event'] ?> Activaciones</li>
+                                <!-- <li><?php echo $stats['object']['event'] ?> Activaciones</li> -->
                                 <li><?php echo get_number_users() ?> Seres</li>
                             </ul>
                         </div>
