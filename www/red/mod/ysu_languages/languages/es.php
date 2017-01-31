@@ -7,13 +7,13 @@ return array (
 	'ysu:landing:text1' => '<h3>Un viaje legendario</h3><p>Entre los años 2017 y 2020, viajaremos alrededor del mundo, reviviendo la sabiduría de las antiguas civilizaciones a través de un camino legendario que nos conectará a todos en una historia <b>para reestablecer la red de conciencia planetaria</b>.</p>',
 	'ysu:landing:text2' => '<h3>Una aventura</h3><p>Paso a paso compartiremos, en esta plataforma web y otras redes sociales, una aventura para redescubrir a nuestro Planeta como ser vivo, viajando por mas de 100 países y dialogando con las diversas culturas, tejiendo una red planetaria ancestral <b>para recordar juntos quiénes somos en realidad</b>.</p>',
 	'ysu:landing:text3' => '<h3>La misión</h3><p>Conectar el planeta entero sembrando mensajes de sabios, jóvenes, niños, con visiones espirituales y científicas para cambiar la forma de pensar del mundo y crear una nueva realidad mediante acciones de conciencia entre las gentes del mundo.</p>',
+  'ysu:landing:text4' => '(Para mas información sobre YOSOY ingresa a este link ...)',
 	'ysu:landing:sumate' => 'Ingresa ahora y sé parte de la Red',
-	'ysu:landing:botonintro' => 'Mas información sobre el proyecto...',
-
+  'ysu:landing:botonintro' => 'Mas información sobre el proyecto ...',
 
 
 	'ysu:boxhome:compartir' => 'Comparte',
-  'ysu:boxhome:description' => 'Envia un mensaje y haz llegar tu voz a toda la Red...',
+  'ysu:boxhome:description' => 'Envia un mensaje y haz llegar tu voz a toda la Red ...',
   'ysu:login:title1' => 'Conectate a la red ...',
   'ysu:login:title2' => 'o Registrate como un Ser',
   'ysu:login:close' => 'Cerrar',

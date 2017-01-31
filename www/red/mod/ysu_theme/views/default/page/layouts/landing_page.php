@@ -81,7 +81,8 @@ elgg_load_js('landing_page_script');
                  </div>
                 <div class="row">
                   <div class="col-sm-12">
-                    <a class="btn btn-large btn-clear cd-modal-trigger" data-target="modal-login" href="#"><?php echo elgg_echo('ysu:landing:sumate') ?></a>
+                    <a style="display: inline-block;"class="btn btn-large btn-clear cd-modal-trigger" data-target="modal-login" href="#"><?php echo elgg_echo('ysu:landing:sumate') ?></a>
+                    <p style="display: block; position: relative; font-size: 14px; margin: 15px;"><a href='http://www.yosoyuno.org'><?php echo elgg_echo('ysu:landing:text4') ?></a></p>
                   </div>
                 </div>
               </div>
