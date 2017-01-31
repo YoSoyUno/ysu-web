@@ -580,37 +580,37 @@ function my_likes_river_menu_setup($hook, $type, $return, $params) {
 	}
 	if ( 	elgg_is_active_plugin('likes')) {
 		$hasLiked = \Elgg\Likes\DataService::instance()->currentUserLikesEntity($object->guid);
-	}
+  	
 
-	// Always register both. That makes it super easy to toggle with javascript
-	$return[] = ElggMenuItem::factory(array(
-		'name' => 'likes',
-		'href' => elgg_add_action_tokens_to_url("/action/likes/add?guid={$object->guid}"),
-		'text' => '<i class="fa fa-thumbs-o-up fa-lg"></i>',
-		'title' => elgg_echo('likes:likethis'),
-		'item_class' => $hasLiked ? 'hidden' : '',
-		'priority' => 100,
-	));
-	$return[] = ElggMenuItem::factory(array(
-		'name' => 'unlike',
-		'href' => elgg_add_action_tokens_to_url("/action/likes/delete?guid={$object->guid}"),
-		'text' => '<i class="fa  fa-thumbs-up fa-lg" style="color:#50C28C"></i>',
-		'title' => elgg_echo('likes:remove'),
-		'item_class' => $hasLiked ? '' : 'hidden',
-		'priority' => 100,
-	));
+  	// Always register both. That makes it super easy to toggle with javascript
+  	$return[] = ElggMenuItem::factory(array(
+  		'name' => 'likes',
+  		'href' => elgg_add_action_tokens_to_url("/action/likes/add?guid={$object->guid}"),
+  		'text' => '<i class="fa fa-thumbs-o-up fa-lg"></i>',
+  		'title' => elgg_echo('likes:likethis'),
+  		'item_class' => $hasLiked ? 'hidden' : '',
+  		'priority' => 100,
+  	));
+  	$return[] = ElggMenuItem::factory(array(
+  		'name' => 'unlike',
+  		'href' => elgg_add_action_tokens_to_url("/action/likes/delete?guid={$object->guid}"),
+  		'text' => '<i class="fa  fa-thumbs-up fa-lg" style="color:#50C28C"></i>',
+  		'title' => elgg_echo('likes:remove'),
+  		'item_class' => $hasLiked ? '' : 'hidden',
+  		'priority' => 100,
+  	));
 
-	// likes count
-	$count = elgg_view('likes/count', array('entity' => $object));
-	if ($count) {
-		$return[] = ElggMenuItem::factory(array(
-			'name' => 'likes_count',
-			'text' => $count,
-			'href' => false,
-			'priority' => 101,
-		));
-	}
-
+  	// likes count
+  	$count = elgg_view('likes/count', array('entity' => $object));
+  	if ($count) {
+  		$return[] = ElggMenuItem::factory(array(
+  			'name' => 'likes_count',
+  			'text' => $count,
+  			'href' => false,
+  			'priority' => 101,
+  		));
+  	}
+  }
 	return $return;
 }
 
