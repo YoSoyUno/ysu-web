@@ -274,7 +274,7 @@ return array (
   'tidypics:none'  => 'Sin fotos',
   'cover:edit'  => 'Editar portada',
   'avatar:edit'  => 'Editar foto de perfil',
-  'river:ingroup'  => 'en el punto',
+  'river:ingroup'  => 'en el punto %s',
   'river:join:site:default'  => 'se unió a la Red',
   'river:create:object:thewire'  => 'ha escrito en',
   'event_manager:event'  => 'Asistencia',
@@ -282,5 +282,10 @@ return array (
   'event_manager:event:relationship:event_attending:undo'  => 'Ya no quiero asistir',
   'groups:members' => 'Seres conectados a este Punto',
 
+  'event_manager:river:event_relationship:create:event_attending' => '%s participará de %s',
+  'event_manager:river:event_relationship:create:event_interested' => '%s está interesado en %s',
+  'event_manager:river:event_relationship:create:event_presenting' => '%s está presentando en %s',
+  'event_manager:river:event_relationship:create:event_exhibiting' => '%s está exponiendo %s',
+  'event_manager:river:event_relationship:create:event_organizing' => '%s está organizando %s',
 
 );
