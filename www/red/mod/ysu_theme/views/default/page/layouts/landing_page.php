@@ -152,6 +152,9 @@ elgg_load_js('landing_page_script');
                     </div>
                 </div>
             </footer>
+            <footer id='footer' class="footer-3" style="background-color: black;">
+              <a id='logo-arsayian' target="_blank" href="http://www.fundacionarsayian.org/"><img title='Fundacion Arsayian' src='/mod/ysu_theme/graphics/arsayian.png' /></a>
+            </footer>
         </div>
 
         <!-- Placed at the end of the document so the pages load faster -->

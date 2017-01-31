@@ -1584,6 +1584,33 @@ section * {
   }
 }
 /* footer */
+
+
+#footer {
+    font-size: 14px;
+    /* padding-top: 65px; */
+    /* padding-bottom: 66px; */
+    /*height: 100px;*/
+    color: #bdc3c7;
+    position: relative;
+    display: block;
+    padding: 0;
+}
+
+#logo-arsayian img {
+  margin: 0 auto;
+  position: relative;
+  display: block;
+  opacity: 0.5;
+  padding: 20px;
+}
+
+#logo-arsayian img:hover {
+  opacity: 1;
+}
+
+
+
 /**
  * Footer 3 stylesheet
  * */
