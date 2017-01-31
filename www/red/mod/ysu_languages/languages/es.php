@@ -10,7 +10,7 @@ return array (
 	'ysu:landing:sumate' => 'Ingresa ahora y sé parte de la Red',
 	'ysu:landing:botonintro' => 'Mas información sobre el proyecto...',
 
-	
+
 
 	'ysu:boxhome:compartir' => 'Comparte',
   'ysu:boxhome:description' => 'Envia un mensaje y haz llegar tu voz a toda la Red...',
@@ -71,7 +71,7 @@ return array (
   'groups:members' => 'Seres en el Punto',
   'groups:my_status' => 'Mi estado',
   'groups:my_status:group_owner' => 'Eres dueño de este Punto',
-  'groups:my_status:group_member' => 'Usted está en este Punto',
+  'groups:my_status:group_member' => 'Usted participa de este Punto',
   'groups:subscribed' => 'Las notificaciones de Punto están activadas',
   'groups:unsubscribed' => 'Las notificaciones de Punto están desactivadas',
 
@@ -265,6 +265,22 @@ return array (
 	'members:title:online' => 'Seres conectados',
 	'members:title:alpha' => 'Todos los Seres',
 	'members:list:popular:none' => 'Ningún Ser tiene amigos',
+
+
+  'event_manager:group' => 'Eventos del Punto',
+  'event_manager:menu:group_events' => 'Eventos del Punto',
+  'event_manager_ysu:activacion_principal' => 'Activacion principal',
+  'membersmap:group' => 'Mapa del Punto',
+  'tidypics:none'  => 'Sin fotos',
+  'cover:edit'  => 'Editar portada',
+  'avatar:edit'  => 'Editar foto de perfil',
+  'river:ingroup'  => 'en el punto',
+  'river:join:site:default'  => 'se unió a la Red',
+  'river:create:object:thewire'  => 'ha escrito en',
+  'event_manager:event'  => 'Asistencia',
+  'event_manager:event:relationship:event_attending'  => 'Quiero asistir',
+  'event_manager:event:relationship:event_attending:undo'  => 'Ya no quiero asistir',
+  'groups:members' => 'Seres conectados a este Punto',
 
 
 );
