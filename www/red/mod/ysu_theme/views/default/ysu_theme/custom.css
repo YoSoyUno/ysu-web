@@ -11,11 +11,13 @@
 #body-news .elgg-breadcrumbs,
 #body-news .elgg-sidebar,
 #body-groups .elgg-module-aside,
+#body-events .elgg-subtext,
 .elgg-menu-item-thewire,
 .elgg-menu-item-photos,
 .elgg-menu-item-photo-albums,
 .elgg-menu-item-events,
-.elgg-menu-item-register {
+.elgg-menu-item-register,
+.elgg-menu-item-setasnew {
   display: none !important;
 }
 
