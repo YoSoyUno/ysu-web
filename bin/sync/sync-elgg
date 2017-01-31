@@ -46,6 +46,9 @@ then
   ../../www/red/vendor/bin/elgg-cli plugins:activate "developers"
   ../../www/red/vendor/bin/elgg-cli config:setting system_cache_enabled 0
   ../../www/red/vendor/bin/elgg-cli config:setting simplecache_enabled 0
+  ../../www/red/vendor/bin/elgg-cli config:setting --plugin developers wrap_views 1
+  ../../www/red/vendor/bin/elgg-cli config:setting --plugin developers display_errors 1
+  ../../www/red/vendor/bin/elgg-cli config:setting --plugin developers screen_log 1
 fi
 
 ../../www/red/vendor/bin/elgg-cli site:flush_cache
