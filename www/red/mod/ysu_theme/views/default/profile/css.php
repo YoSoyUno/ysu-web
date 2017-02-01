@@ -35,15 +35,16 @@
 	background: #FFFFFF;
 	margin-right: 10px;
   padding: 0 10px;
+	width: 100%;
 }
 
 #profile-details {
-	display: block;
-	background: #fff;	
+	display: inline-block;
+	background: #fff;
 	margin: 5px 0 15px 0;
 	padding: 15px;
 }
-	
+
 .profile-action-menu {
 	float: left;
 	margin: 15px 10px;
@@ -112,4 +113,3 @@
 .profile-banned-user h4 {
 	color: #B94A48;
 }
-

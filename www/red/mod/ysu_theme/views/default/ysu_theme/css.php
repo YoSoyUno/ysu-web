@@ -245,6 +245,7 @@ html {
 	/***** WIDGETS ******/
 	.elgg-col-1of3,
 	.elgg-col-2of3,
+	.elgg-col-3of3,
 	#elgg-widget-col-1,
 	#elgg-widget-col-2,
 	#elgg-widget-col-3 {
@@ -472,7 +473,7 @@ h1, h2, h3, h4, h5, h6 {
     background-size: cover !important;
     display: block;
     height: 250px;
-    width: 945px;
+    /*width: 945px;*/
 }
 
 #profile-owner-block {
@@ -497,12 +498,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #elgg-profile-actions{
-  background: #000;
+  background: rgba(0, 0, 0, 0.63);
   bottom: 0;
   margin: 10px;
   min-width: 120px;
   position: absolute;
   right: 0;
+	display: none;
 }
 
 #elgg-profile-config{
@@ -514,12 +516,13 @@ h1, h2, h3, h4, h5, h6 {
 
 #elgg-profile-config a{
   text-shadow: 1px 1px 2px #000;
-  color: #fff;
+  color: #ccc;
 }
 
 #elgg-profile-config a:hover{
   text-decoration: none;
   text-transform: none;
+	color: #fff;
 }
 
 #elgg-profile-actions li a:hover{
@@ -574,7 +577,7 @@ height: 180px;
 	.elgg-cover {
 	    background-size: 800px auto;
 	    height: 250px;
-	    width: 105%;
+	    /*width: 105%;*/
 	}
 
 	#profile-owner-block {
@@ -604,7 +607,7 @@ height: 180px;
 	.elgg-cover {
 	    background-size: 600px auto;
 	    height: 250px;
-	    width: 100%;
+	    /*width: 100%;*/
 	}
 
 	#profile-owner-block {
@@ -617,6 +620,8 @@ height: 180px;
 	.elgg-profile-name {
     float: left;
     margin: 10px 0 0 10px;
+		bottom: 30px;
+		position: absolute;
 	}
 
 	.profile h2 {

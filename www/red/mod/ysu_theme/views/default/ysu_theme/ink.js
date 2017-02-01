@@ -5,7 +5,7 @@ define(function(require) {
     jQuery(document).ready(function($){
 
       $( document ).tooltip();
-      
+
       // Codigo redondo
       console.log('\n\
       Soy un perdido eléctrico\n\
@@ -36,6 +36,19 @@ define(function(require) {
       \n\
       \n\
       ');
+
+        // $("#elgg-profile-actions").hide();
+
+  		    $("#profile-button").click(function(){
+  		        $("#profile-details-info").toggle();
+  		        return false;
+  		    });
+
+  		     $("#profile-config-botom").click(function(){
+  		        $("#elgg-profile-actions").toggle();
+  		        return false;
+  		    });
+
 
     	//cache some jQuery objects
     	var modalTrigger = $('.cd-modal-trigger'),

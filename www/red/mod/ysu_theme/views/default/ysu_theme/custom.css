@@ -44,6 +44,9 @@ body.body-admin .elgg-menu-page-configure, body.body-admin .elgg-widget-instance
   height: 100vh !important;
 }
 
+.sliderbar-user-menu a {
+  color: white;
+}
 
 #groups-tools .elgg-item-object-event-activacion-ysu {
 	background: #e5e5ad;
@@ -966,7 +969,7 @@ input#register-name {
   }
 }
 
-@media (max-width: 330px) {
+@media (max-width: 450px) {
 	.logo {
     width: 64px;
     position: absolute;

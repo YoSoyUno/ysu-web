@@ -36,7 +36,7 @@ if (elgg_is_admin_logged_in() && elgg_get_logged_in_user_guid() != elgg_get_page
   }
   $admin_links .= '</ul>';
   $admin_links .= '</li>';
-  $admin_links .= '</ul>';  
+  $admin_links .= '</ul>';
 }
 
 // content links
@@ -52,7 +52,7 @@ $cover = getCoverIconUrl('large');
 <div class="profile elgg-col-3of3 mrn profile-details">
 	<div class="elgg-inner clearfix h-card vcard elgg-cover" style="background: url(<?php echo $cover ?>) center no-repeat; position: relative">
 		<?php echo elgg_view('profile/owner_block'); ?>
-		
+
 	</div>
 </div>
 <div class="profile elgg-col-2of3">
@@ -72,5 +72,3 @@ $cover = getCoverIconUrl('large');
 <script>
 
 </script>
-
-
