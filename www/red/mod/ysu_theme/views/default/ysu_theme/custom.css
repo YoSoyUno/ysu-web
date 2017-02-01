@@ -17,7 +17,8 @@
 .elgg-menu-item-photo-albums,
 .elgg-menu-item-events,
 .elgg-menu-item-register,
-.elgg-menu-item-setasnew {
+.elgg-menu-item-setasnew,
+.elgg-menu-item-sorting {
   display: none !important;
 }
 

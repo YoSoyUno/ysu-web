@@ -79,8 +79,8 @@ switch ($selected_tab) {
 		// @todo drop this?
 		$order_id = elgg_get_metastring_id('order');
 
-		$group_options['limit'] = false;
-		$group_options['pagination'] = false;
+		$group_options['limit'] = 20;
+		$group_options['pagination'] = true;
 		$group_options['selects'] = [
 			"IFNULL((SELECT order_ms.string as order_val
 			FROM {$dbprefix}metadata mo
@@ -88,14 +88,14 @@ switch ($selected_tab) {
 			WHERE e.guid = mo.entity_guid
 			AND mo.name_id = {$order_id}), 99999) AS order_val",
 		];
-		$group_options['metadata_name_value_pairs'] = [
-			'name' => 'estado',
-			'value' => 'Incompleto',
-		];
+		// $group_options['metadata_name_value_pairs'] = [
+		// 	'name' => 'estado',
+		// 	'value' => 'Incompleto',
+		// ];
 		$group_options['order_by_metadata'] = [
 				'name' => 'orden',
 				'direction' => ASC,
-				'as' => integer
+				'as' => string
 		];
 
 		//$group_options['order_by'] = 'CAST(order_val AS SIGNED) ASC, e.time_created DESC';
