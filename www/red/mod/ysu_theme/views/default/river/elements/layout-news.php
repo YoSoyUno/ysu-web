@@ -1,6 +1,8 @@
 <?php
 
-include(elgg_get_plugins_path() . 'amapnews/lib/amapnews.php');
+if (!function_exists('amapnews_prepare_form_vars')) {
+	include(elgg_get_plugins_path() . 'amapnews/lib/amapnews.php');
+}
 /**
  * Layout of a river item
  *
