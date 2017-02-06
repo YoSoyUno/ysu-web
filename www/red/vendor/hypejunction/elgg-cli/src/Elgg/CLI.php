@@ -10,6 +10,7 @@ use Elgg\CLI\InstallCommand;
 use Elgg\CLI\ConfigSettingCommand;
 use Elgg\CLI\PluginsActivateCommand;
 use Elgg\CLI\PluginsDeactivateCommand;
+use Elgg\CLI\RemoveUsersCommand;
 use Elgg\CLI\RouteCommand;
 use Elgg\CLI\SiteFlushCacheCommand;
 use Elgg\CLI\SiteUpgradeCommand;
@@ -52,6 +53,7 @@ class CLI {
 			ConfigSettingCommand::class,
 			PluginsActivateCommand::class,
 			PluginsDeactivateCommand::class,
+			RemoveUsersCommand::class,
 			RouteCommand::class,
 			ActionCommand::class,
 			CLI\EntitiesGetCommand::class,
